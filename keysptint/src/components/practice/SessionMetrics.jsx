@@ -13,20 +13,20 @@ export default function SessionMetrics({ session }) {
     progress = (input.length / text.length) * 100
   }
   return (
-    <>
-      <div className="mb-3 flex justify-between text-xs font-semibold text-slate-400">
+    <section className="session-metrics" aria-label="Session statistics">
+      <div className="session-progress-label mb-3 flex justify-between text-xs font-semibold text-slate-400">
         <span className="tracking-widest">
           {timed ? 'SESSION TIME' : 'YOUR PROGRESS'}
         </span>
         <span>{progressLabel}</span>
       </div>
-      <div className="mb-7 h-1.5 overflow-hidden rounded-full bg-[#e6e7f2]">
+      <div className="session-progress-bar mb-7 h-1.5 overflow-hidden rounded-full bg-[#e6e7f2]">
         <div
           className="h-full rounded-full bg-violet-500 transition-all"
           style={{ width: `${progress}%` }}
         />
       </div>
-      <div className="mb-7 grid grid-cols-4 gap-2 text-center">
+      <div className="session-stat-grid mb-7 grid grid-cols-4 gap-2 text-center">
         {[
           [wpm, 'WPM'],
           [`${accuracy}%`, 'ACCURACY'],
@@ -41,6 +41,6 @@ export default function SessionMetrics({ session }) {
           </div>
         ))}
       </div>
-    </>
+    </section>
   )
 }

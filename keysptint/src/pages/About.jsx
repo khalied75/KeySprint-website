@@ -20,7 +20,7 @@ const features = [
   {
     title: 'Game challenges',
     description:
-      'Race the clock, protect your three lives, remember a hidden word, follow letter clues, or solve a scramble. Five ways to keep learning playful.',
+      'Race the clock, protect your three lives, catch moving words, remember a hidden word, follow letter clues, or solve a scramble. Six ways to keep learning playful.',
     icon: 'game',
   },
   {
@@ -126,11 +126,12 @@ export default function About({ notFound = false }) {
           </p>
         </div>
         <div>
-          <h2 className="mb-3 text-sm font-bold">Memory, clues & scrambles</h2>
+          <h2 className="mb-3 text-sm font-bold">Memory, clues & moving words</h2>
           <p className="text-xs leading-6 text-slate-500">
             Each incorrect guess counts as one mistake. Correct answers contribute their
             letter count. Recall and detective runs have five rounds; scramble runs until
-            your chosen time expires.
+            your chosen time expires. Word rush ends when time expires or three words
+            cross the line; each missed word costs a life and counts as a mistake.
           </p>
         </div>
         <div>

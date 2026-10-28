@@ -10,7 +10,7 @@ export default function SessionHeader({ settings, session }) {
       ? `${timeLimit}-second sprint`
       : challenge?.name || 'Focus mode'
   return (
-    <div className="mb-8 flex items-center justify-between gap-3">
+    <div className="session-header mb-8 flex items-center justify-between gap-3">
       <div className="flex min-w-0 items-center gap-3 sm:gap-4">
         <Link
           to={settings.game ? '/games' : '/'}

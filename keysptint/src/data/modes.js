@@ -30,6 +30,14 @@ export const challenges = [
     tag: 'TEST YOUR ACCURACY',
   },
   {
+    id: 'rush',
+    name: 'Word rush',
+    description:
+      'Catch moving words before they cross the line. Three lives, rising speed.',
+    icon: 'rush',
+    tag: 'CATCH THE WORD',
+  },
+  {
     id: 'recall',
     name: 'Flash recall',
     description: 'Remember the word, then type it from memory.',

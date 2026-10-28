@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router'
 import { categories, challenges, modes } from '../data/modes'
 import { normalizeDuration } from '../utils/games'
 import TrainingSession from '../components/practice/TrainingSession'
+import WordRushSession from '../components/word-rush/WordRushSession'
 
 export default function Practice() {
   const [params] = useSearchParams()
@@ -22,9 +23,15 @@ export default function Practice() {
         : '',
       length: params.get('length') || '',
       starts: (params.get('starts') || '').slice(0, 1),
-      duration: normalizeDuration(params.get('duration')),
+      duration: normalizeDuration(
+        params.get('duration'),
+        params.get('game') === 'rush' ? 10 : 5,
+      ),
     }),
     [params],
   )
+  if (settings.game === 'rush') {
+    return <WordRushSession key={params.toString()} settings={settings} />
+  }
   return <TrainingSession key={params.toString()} settings={settings} />
 }

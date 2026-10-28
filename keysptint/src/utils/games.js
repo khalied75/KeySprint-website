@@ -1,13 +1,14 @@
-export const isTimedGame = (game) => game === 'sprint' || game === 'scramble'
-export const isWordGame = (game) => ['recall', 'detective', 'scramble'].includes(game)
+export const isTimedGame = (game) => ['sprint', 'scramble', 'rush'].includes(game)
+export const isWordGame = (game) =>
+  ['recall', 'detective', 'scramble', 'rush'].includes(game)
 
-export function normalizeDuration(value) {
+export function normalizeDuration(value, minimum = 5) {
   const duration = Number(value)
   return Number.isFinite(duration) &&
     value !== null &&
     value !== '' &&
     value !== undefined
-    ? Math.max(5, Math.min(60, Math.round(duration)))
+    ? Math.max(minimum, Math.min(60, Math.round(duration)))
     : 60
 }
 

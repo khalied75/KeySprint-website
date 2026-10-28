@@ -36,7 +36,7 @@ export default function TrainingSession({ settings }) {
   }, [status, revealed])
 
   return (
-    <div className="mx-auto max-w-[1060px]">
+    <div className="practice-session mx-auto max-w-[1060px]">
       <SessionHeader settings={settings} session={session} />
 
       {status === 'error' ? (
@@ -53,17 +53,17 @@ export default function TrainingSession({ settings }) {
           {status === 'done' ? (
             <SessionResult settings={settings} session={session} />
           ) : (
-            <>
+            <div className="practice-workspace">
               <ExercisePanel settings={settings} session={session} field={field} />
               <TypingInput settings={settings} session={session} field={field} />
 
               {session.feedback && (
-                <p role="status" className="mt-3 text-sm text-amber-600">
+                <p role="status" className="session-feedback mt-3 text-sm text-amber-600">
                   {session.feedback}
                 </p>
               )}
 
-              <div className="mt-5 flex items-center justify-between gap-4 text-xs text-slate-400">
+              <div className="session-actions mt-5 flex items-center justify-between gap-4 text-xs text-slate-400">
                 <span>{getSessionHint(settings, session)}</span>
                 <button
                   className="shrink-0 font-semibold text-violet-500 hover:text-violet-700"
@@ -73,7 +73,7 @@ export default function TrainingSession({ settings }) {
                   Finish session
                 </button>
               </div>
-            </>
+            </div>
           )}
         </>
       )}

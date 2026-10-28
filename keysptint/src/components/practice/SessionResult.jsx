@@ -4,7 +4,7 @@ import Icon from '../Icon'
 export default function SessionResult({ settings, session }) {
   const { wpm, accuracy, counts, guessing, timed, elapsed } = session
   return (
-    <section className="panel px-5 py-14 text-center" aria-live="polite">
+    <section className="session-result panel px-5 py-14 text-center" aria-live="polite">
       <span className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-100 text-violet-600">
         <Icon name="trophy" className="h-9 w-9" />
       </span>

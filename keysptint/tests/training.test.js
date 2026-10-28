@@ -55,7 +55,7 @@ test('word filters work and impossible filters return an actionable error', asyn
 })
 
 test('memory, detective, and scramble challenges return a single word', async () => {
-  for (const game of ['recall', 'detective', 'scramble']) {
+  for (const game of ['recall', 'detective', 'scramble', 'rush']) {
     const result = await getExercise({ mode: 'words', game })
     assert.ok(result.length > 0)
     assert.equal(result.includes(' '), false)

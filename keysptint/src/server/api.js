@@ -29,6 +29,26 @@ export async function loadLibraryStats() {
   return calculateContentStats({ words, sentences, paragraphs, grammar })
 }
 
+export async function loadWordPool({
+  difficulty = 'easy',
+  category = 'common',
+  length = '',
+  starts = '',
+}) {
+  const content = await loadContent('words')
+  const words = content[difficulty][category].filter(
+    (word) =>
+      (!length || word.length === Number(length)) &&
+      (!starts || word.toLowerCase().startsWith(starts.toLowerCase())),
+  )
+  if (!words.length) {
+    throw new Error(
+      'No words match these filters. Try another length or starting letter.',
+    )
+  }
+  return words
+}
+
 export function shuffle(items) {
   const result = [...items]
   for (let i = result.length - 1; i > 0; i--) {
@@ -66,14 +86,10 @@ export async function getExercise({
       : mode === 'letters'
         ? 'words'
         : mode
-  const content = await loadContent(type)
-  let items = type === 'words' ? content[difficulty][category] : content[difficulty]
-  if (type === 'words')
-    items = items.filter(
-      (word) =>
-        (!length || word.length === Number(length)) &&
-        (!starts || word.toLowerCase().startsWith(starts.toLowerCase())),
-    )
+  let items =
+    type === 'words'
+      ? await loadWordPool({ difficulty, category, length, starts })
+      : (await loadContent(type))[difficulty]
   if (game === 'scramble')
     items = items.filter((word) => new Set(word.toLowerCase()).size > 1)
   if (!items.length)

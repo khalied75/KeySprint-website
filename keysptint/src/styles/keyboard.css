@@ -1,0 +1,85 @@
+/* A visual guide for desktop keyboards; never competes with a mobile keyboard. */
+.keyboard-visualizer {
+  display: none;
+}
+
+@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+  .keyboard-visualizer {
+    display: block;
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 14px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface-muted);
+    user-select: none;
+  }
+
+  .keyboard-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: var(--muted);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+  }
+
+  .keyboard-rows {
+    display: grid;
+    gap: 5px;
+  }
+  .keyboard-row {
+    display: flex;
+    gap: 5px;
+  }
+
+  .keyboard-key {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 0;
+    min-width: 0;
+    height: 36px;
+    border: 1px solid var(--line);
+    border-bottom-width: 3px;
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--foreground);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    transition:
+      background-color 0.08s,
+      border-color 0.08s,
+      transform 0.08s,
+      box-shadow 0.08s;
+  }
+
+  .keyboard-key[data-code='KeyF']::after,
+  .keyboard-key[data-code='KeyJ']::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    width: 8px;
+    height: 2px;
+    border-radius: 2px;
+    background: currentColor;
+    opacity: 0.4;
+  }
+
+  .keyboard-key:hover {
+    background: var(--selection);
+    border-color: #8b7ee7;
+  }
+  .keyboard-key.is-pressed {
+    transform: translateY(2px);
+    background: #7464db;
+    border-color: #a79bf8;
+    border-bottom-color: #5646b8;
+    color: white;
+    box-shadow: 0 0 14px #7464db55;
+  }
+}

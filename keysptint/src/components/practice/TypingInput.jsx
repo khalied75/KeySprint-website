@@ -1,11 +1,16 @@
 import Icon from '../Icon'
 import { useSettings } from '../../context/SettingsContext'
+import usePressedKeys from '../../hooks/usePressedKeys'
+import KeyboardVisualizer from './KeyboardVisualizer'
 
 export default function TypingInput({ settings, session, field }) {
-  const { playKey } = useSettings()
+  const { settings: preferences, playKey } = useSettings()
+  const { pressedKeys, pressKey, clearKeys } = usePressedKeys()
   const { input, status, guessing, revealed } = session
+  const inputLocked = status === 'loading' || (settings.game === 'recall' && revealed)
 
   function handleChange(event) {
+    if (inputLocked) return
     const value = event.target.value
     if (value !== input) {
       let sound = 'letter'
@@ -17,24 +22,28 @@ export default function TypingInput({ settings, session, field }) {
   }
 
   function handleKeyDown(event) {
+    if (preferences.showKeyboard) pressKey(event)
     if (event.key === 'Enter' && guessing && input.trim()) playKey('enter')
   }
 
   return (
     <form
       onSubmit={guessing ? session.submitGuess : (event) => event.preventDefault()}
-      className="mt-5"
+      className="typing-input-form mt-5"
     >
-      <div className="flex items-center gap-4 rounded-2xl border-2 border-violet-300 bg-white p-4 focus-within:border-violet-500 focus-within:ring-4 focus-within:ring-violet-100">
+      <div className="typing-input-shell flex items-center gap-4 rounded-2xl border-2 border-violet-300 bg-white p-4 focus-within:border-violet-500 focus-within:ring-4 focus-within:ring-violet-100">
         <Icon name="keyboard" className="ml-1 h-6 w-6 shrink-0 text-slate-400" />
         <input
           ref={field}
           value={input}
           onChange={handleChange}
           onKeyDown={handleKeyDown}
+          onBlur={clearKeys}
           onPaste={(event) => event.preventDefault()}
           onDrop={(event) => event.preventDefault()}
-          disabled={status === 'loading' || (settings.game === 'recall' && revealed)}
+          aria-disabled={inputLocked}
+          aria-busy={status === 'loading'}
+          enterKeyHint={guessing ? 'go' : 'done'}
           autoComplete="off"
           autoCorrect="off"
           autoCapitalize="off"
@@ -42,11 +51,13 @@ export default function TypingInput({ settings, session, field }) {
           aria-label={guessing ? 'Your answer' : 'Type the displayed text'}
           className="w-full min-w-0 bg-transparent py-1 text-lg outline-none placeholder:text-slate-400"
           placeholder={
-            settings.game === 'recall' && revealed
-              ? 'Memorize the word above…'
-              : guessing
-                ? 'Type your answer…'
-                : 'Start typing here…'
+            settings.game === 'rush'
+              ? 'Type the moving word…'
+              : settings.game === 'recall' && revealed
+                ? 'Memorize the word above…'
+                : guessing
+                  ? 'Type your answer…'
+                  : 'Start typing here…'
           }
         />
         {guessing && (
@@ -59,6 +70,7 @@ export default function TypingInput({ settings, session, field }) {
           </button>
         )}
       </div>
+      {preferences.showKeyboard && <KeyboardVisualizer pressedKeys={pressedKeys} />}
     </form>
   )
 }

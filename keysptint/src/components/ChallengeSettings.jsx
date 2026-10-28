@@ -26,6 +26,7 @@ export default function ChallengeSettings({
       {isTimedGame(settings.game) && (
         <DurationSlider
           value={settings.duration}
+          minimum={settings.game === 'rush' ? 10 : 5}
           onChange={(value) => update('duration', value)}
         />
       )}

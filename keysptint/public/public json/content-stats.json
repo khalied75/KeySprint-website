@@ -1,22 +1,22 @@
 {
-  "grammar": 24,
+  "grammar": 60,
   "words": 7360,
-  "sentences": 1786,
+  "sentences": 2110,
   "paragraphs": 420,
   "levels": {
     "easy": {
       "words": 2220,
-      "sentences": 600,
+      "sentences": 708,
       "paragraphs": 140
     },
     "medium": {
       "words": 3367,
-      "sentences": 587,
+      "sentences": 695,
       "paragraphs": 140
     },
     "hard": {
       "words": 1773,
-      "sentences": 599,
+      "sentences": 707,
       "paragraphs": 140
     }
   }

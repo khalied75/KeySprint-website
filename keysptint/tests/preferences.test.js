@@ -9,18 +9,25 @@ import {
 import { keyboardAudioSupported, playMechanicalKey } from '../src/utils/keyboardAudio.js'
 
 test('preferences use the system theme initially and validate stored options', () => {
-  assert.deepEqual(normalizePreferences(null), { theme: 'light', keyboardSound: false })
+  assert.deepEqual(normalizePreferences(null), {
+    theme: 'light',
+    keyboardSound: false,
+    showKeyboard: true,
+  })
   assert.deepEqual(normalizePreferences(null, true), {
     theme: 'dark',
     keyboardSound: false,
+    showKeyboard: true,
   })
   assert.deepEqual(normalizePreferences({ theme: 'light', keyboardSound: true }, true), {
     theme: 'light',
     keyboardSound: true,
+    showKeyboard: true,
   })
   assert.deepEqual(normalizePreferences({ theme: 'unknown', keyboardSound: 'true' }), {
     theme: 'light',
     keyboardSound: false,
+    showKeyboard: true,
   })
 })
 
@@ -36,10 +43,20 @@ test('preferences persist and recover safely from corrupt or unavailable storage
       stored = value
     },
   }
-  writePreferences({ theme: 'dark', keyboardSound: true })
-  assert.deepEqual(readPreferences(), { theme: 'dark', keyboardSound: true })
+  writePreferences({ theme: 'dark', keyboardSound: true, showKeyboard: false })
+  assert.deepEqual(readPreferences(), {
+    theme: 'dark',
+    keyboardSound: true,
+    showKeyboard: false,
+  })
+  writePreferences({ ...readPreferences(), showKeyboard: true })
+  assert.equal(readPreferences().showKeyboard, true)
   stored = 'broken json'
-  assert.deepEqual(readPreferences(true), { theme: 'dark', keyboardSound: false })
+  assert.deepEqual(readPreferences(true), {
+    theme: 'dark',
+    keyboardSound: false,
+    showKeyboard: true,
+  })
   globalThis.localStorage = {
     getItem: () => {
       throw new Error('disabled')
@@ -48,7 +65,11 @@ test('preferences persist and recover safely from corrupt or unavailable storage
       throw new Error('disabled')
     },
   }
-  assert.deepEqual(readPreferences(), { theme: 'light', keyboardSound: false })
+  assert.deepEqual(readPreferences(), {
+    theme: 'light',
+    keyboardSound: false,
+    showKeyboard: true,
+  })
   assert.doesNotThrow(() => writePreferences({ theme: 'dark', keyboardSound: true }))
 })
 

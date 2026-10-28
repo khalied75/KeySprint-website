@@ -1,0 +1,83 @@
+.rush-board {
+  position: relative;
+  height: clamp(210px, 30vw, 320px);
+  overflow: hidden;
+  border: 1px solid #414b78;
+  border-radius: 24px;
+  background: #1d2543;
+}
+
+.rush-rail {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 48%;
+  height: 2px;
+  background: #3b456b;
+}
+
+.rush-deadline {
+  position: absolute;
+  top: 16px;
+  bottom: 16px;
+  right: 16px;
+  border-left: 3px solid #fb7185;
+  box-shadow: 0 0 12px #fb718533;
+}
+
+.rush-track {
+  position: absolute;
+  left: 16px;
+  right: 20px;
+  top: 20%;
+  height: 56%;
+  display: flex;
+  align-items: center;
+}
+
+.rush-word {
+  position: relative;
+  flex-shrink: 0;
+  width: max-content;
+  max-width: 100%;
+  padding: 14px 20px;
+  border-radius: 18px;
+  background: #6858ed;
+  color: #fff;
+  font-size: clamp(17px, 4vw, 32px);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  box-shadow: 0 0 28px #6858ed33;
+  will-change: left, transform;
+}
+
+.rush-instruction,
+.rush-loading {
+  position: absolute;
+  left: 20px;
+  right: 24px;
+  bottom: 18px;
+  color: #b1badd;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.07em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.rush-loading {
+  top: 42%;
+  bottom: auto;
+  text-transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rush-word {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    will-change: auto;
+  }
+}

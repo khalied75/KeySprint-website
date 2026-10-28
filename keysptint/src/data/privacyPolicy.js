@@ -17,8 +17,8 @@ export const privacySections = [
     title: '2. Your practice and settings',
     paragraphs: [
       'KeySprint does not require an account or ask you to enter your name, email address, phone number, or payment information to use its learning features.',
-      'When you complete or finish a session, KeySprint stores its result in your browser: the practice mode, difficulty, words per minute, accuracy, mistake count, duration, score, rounds completed, session date, and a locally generated session identifier. Timed sessions also include their selected time limit.',
-      'The website also stores your light or dark theme and whether mechanical keyboard sounds are enabled. These settings and results are used to display your progress and remember your preferences.',
+      'When you complete or finish a session, KeySprint stores its result in your browser: the practice mode, difficulty, words per minute, accuracy, mistake count, duration, score, rounds completed, session date, and a locally generated session identifier. Timed sessions also include their selected time limit; Word rush results include the number of missed words.',
+      'The website also stores your light or dark theme, whether mechanical keyboard sounds are enabled, and whether the desktop keyboard visualization is shown. These settings and results are used to display your progress and remember your preferences.',
       'Text entered in a typing exercise or quiz is processed within the page to check your answer. The current website does not send that text to a server or save the text as part of your session history.',
     ],
   },

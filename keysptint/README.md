@@ -52,13 +52,21 @@ tests/training.test.js     Content, game, filter, typing, and storage checks
 
 - `/`: choose letters, words, sentences, or paragraphs, with three difficulty levels. Word mode supports category, length, and starting-letter filters.
 - `/practice`: type an exercise and see live WPM, accuracy, mistakes, and elapsed time. Correct errors to complete the passage. Pasting is disabled during training.
-- `/games`: timed sentence sprint, three-life sentence survival, flash recall (3-second preview, 5 words), word detective (first/last letter and category clues, 5 words), and letter scramble. Sprint and scramble offer a 5–60 second slider; their timers begin on the first keystroke. Scramble continues through words until time expires.
-- `/learn`: 24 grammar explanations, examples, quizzes, and a searchable vocabulary library with pagination. Sentence typing uses the general sentence library rather than lesson-specific exercises.
+- `/games`: timed sentence sprint, three-life sentence survival, Word rush, flash recall (3-second preview, 5 words), word detective (first/last letter and category clues, 5 words), and letter scramble. Sprint and scramble offer a 5–60 second slider; Word rush offers 10–60 seconds. Timers begin on the first keystroke.
+- `/learn`: grammar explanations, examples, quizzes, and a searchable vocabulary library with pagination. Sentence typing uses the general sentence library rather than lesson-specific exercises.
 - `/progress`: latest 100 completed or manually finished sessions, saved in localStorage on the current browser/device when available.
-- `/about`: practice overview, links to all five games, scoring details, privacy notes, and a Google Play coming-soon notice. The notice also appears on the homepage and does not link to an unreleased listing. Unknown routes show a recovery page.
+- `/about`: practice overview, links to all six games, scoring details, privacy notes, and a Google Play coming-soon notice. The notice also appears on the homepage and does not link to an unreleased listing. Unknown routes show a recovery page.
 - `/settings`: dark mode and mechanical keyboard sound switches. Preferences are saved locally. The initial theme follows the operating system unless a theme was saved. Keyboard sound defaults to off and uses locally synthesized Web Audio in the practice/game input, including mobile text input; no audio asset or microphone permission is required.
 
-Mobile layouts use a two-row navigation header, touch-sized controls, wrapping cards, readable input sizes, and responsive training screens. Dark mode applies to all routes, cards, fields, tables, and notices.
+### Word rush
+
+Catch the displayed word before its right edge reaches the deadline. A complete, case-insensitive match is caught automatically without pressing Enter. Each successful catch increases speed by reducing travel time by 8%, down to a 2.2-second minimum. Difficulty controls the initial travel time (easy: 8 seconds, medium: 6.5 seconds, hard: 5.2 seconds).
+
+Missing a word costs one of three lives and resets the combo; submitting a wrong guess counts as a mistake but does not spend a life. The run ends at zero lives, the selected time limit, or a manual finish. Results appear in My progress. Keyboard sounds and word filters work as in other word games. Reduced-motion users get a stationary word with a deadline progress indicator.
+
+The feature is split into `components/word-rush/`, `hooks/useWordRush.js`, `utils/wordRush.js`, and `styles/word-rush.css`. Pure engine tests cover catches, speed, missed deadlines, delayed browser frames, time limits, and restarts.
+
+Mobile browsing pages use a two-row navigation header, touch-sized controls, wrapping cards, and readable input sizes. During practice, the site navigation and footer are hidden on small screens to leave room for the exercise and keyboard; the session header still provides back and restart controls. The workspace follows the visual viewport when the software keyboard opens, keeps the typing input below the exercise, and reduces stats in short viewports. Long exercise text scrolls independently and follows the current character. Word rush uses the same compact workspace. Dark mode applies to all routes, cards, fields, tables, and notices.
 
 WPM uses five correct keystrokes per word. In standard typing modes, accuracy uses entered keystrokes, including corrected mistakes. In recall/detective modes, each wrong guess counts as one mistake and correct answers contribute their letter count. Results from these games therefore measure different skills from ordinary typing.
 
@@ -70,11 +78,21 @@ To rebuild the expanded content, run `node scripts/expand-content.mjs`. The scri
 
 ## Deployment
 
+Firebase Hosting security headers are configured for every path in `firebase.json`, while preserving the React Router fallback to `/index.html`. The CSP allows scripts, stylesheets, fonts, and lesson requests from this site's origin, blocks inline JavaScript, objects, workers, and frames, and prevents the page from being embedded. Inline style attributes remain allowed for React's progress bars, moving words, keyboard keys, and viewport sizing; inline stylesheet blocks are not enabled. Keyboard audio uses Web Audio and does not need microphone access.
+
+The configuration also sets HSTS (one year, without subdomain/preload opt-ins), MIME sniffing protection, a referrer policy, permissions restrictions for unused device features, and same-origin opener/resource policies. Firebase controls the HSTS value on its default `web.app`/`firebaseapp.com` domains; the configured value applies to custom domains. See [Firebase Hosting header configuration](https://firebase.google.com/docs/hosting/full-config#headers) and [CSP style attributes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr).
+
+Build with `npm run build`, then deploy from this folder with `firebase deploy --only hosting` to activate these headers on the hosted site. Vite development/preview servers do not use Firebase's header configuration. After deployment, inspect the document response headers on the live site; production header delivery has not been verified locally. If external SDKs, analytics, fonts, or embeds are added later, review their required origins before changing the CSP.
+
 The footer links to `/privacy-policy`. Policy content and the privacy contact email live in `src/data/privacyPolicy.js`. The current policy describes this web implementation. Before using its deployed public URL in Google Play Console, review the Android build's permissions, SDKs, advertising, analytics, data handling, and developer details; update the policy to match the released app. The host must serve this route publicly without authentication.
 
 `npm run build` outputs `dist/`. Configure your static host to rewrite unknown application paths to `/index.html` so React Router deep links work. For a subdirectory deployment, configure Vite's `base` and BrowserRouter's `basename` together. The default assumes deployment at the domain root.
 
 ## Code formatting and navigation
+
+Additional grammar lessons and sentence exercises are authored in `scripts/content/grammar-lessons.json` and `scripts/content/sentence-exercises.json`. Run `npm run content:add-lessons` to merge these into the public library and refresh statistics. Existing lesson IDs keep their current content, and repeated runs do not duplicate lessons or sentences. The script leaves words and paragraphs unchanged. Each added grammar lesson includes four examples and a multiple-choice question; its examples are also added to sentence typing at the matching difficulty.
+
+The typing field includes a visual QWERTY keyboard on desktop screens (at least 1024px with a mouse/trackpad pointer). It highlights physical keys while held, including Shift combinations, and clears highlights on release or focus loss. It is a visual guide, not an extra input method, and is hidden on mobile to preserve exercise space. Layout data, pressed-key tracking, and styling live in `data/keyboardLayout.js`, `hooks/usePressedKeys.js`, and `styles/keyboard.css`.
 
 Page files coordinate state and navigation. Their UI sections live in the matching `components/home`, `components/games`, and `components/practice` folders. `hooks/useTraining.js` owns session behavior; `utils/trainingDisplay.js` owns prompt labels and character highlighting. Keep new UI in the relevant folder rather than extending a page with unrelated sections.
 

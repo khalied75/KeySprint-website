@@ -9,6 +9,7 @@ export function normalizePreferences(value, systemDark = false) {
           ? 'dark'
           : 'light',
     keyboardSound: value?.keyboardSound === true,
+    showKeyboard: value?.showKeyboard !== false,
   }
 }
 

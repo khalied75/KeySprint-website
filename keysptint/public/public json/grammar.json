@@ -454,5 +454,725 @@
       "However"
     ],
     "answer": "Despite"
+  },
+  {
+    "id": "there-is-are",
+    "title": "There is and there are",
+    "level": "easy",
+    "description": "Say that something exists or is present.",
+    "explanation": "Use there is with a singular countable noun or an uncountable noun. Use there are with plural nouns. For questions, put is or are before there. Use there is not or there are not for negatives.",
+    "examples": [
+      "There is a bakery near my house.",
+      "There are three notebooks on the desk.",
+      "Is there any water in the bottle?",
+      "There are not any chairs in this room."
+    ],
+    "question": "There ___ two windows in our classroom.",
+    "options": [
+      "is",
+      "are",
+      "am"
+    ],
+    "answer": "are"
+  },
+  {
+    "id": "demonstratives",
+    "title": "This, that, these, and those",
+    "level": "easy",
+    "description": "Point to things that are near or far away.",
+    "explanation": "Use this for one nearby thing and these for several nearby things. Use that for one thing farther away and those for several things farther away. This and that take singular verbs; these and those take plural verbs.",
+    "examples": [
+      "This sandwich is for you.",
+      "These shoes are very comfortable.",
+      "That building across the road is a library.",
+      "Those clouds look dark."
+    ],
+    "question": "___ books here on my desk are new.",
+    "options": [
+      "This",
+      "These",
+      "That"
+    ],
+    "answer": "These"
+  },
+  {
+    "id": "can-ability",
+    "title": "Can and cannot",
+    "level": "easy",
+    "description": "Talk about ability and ask simple permission questions.",
+    "explanation": "Put can before the base form of a verb. Do not add -s after he or she, and do not use to after can. Use cannot or can't for a negative. Put can before the subject to ask a question.",
+    "examples": [
+      "My sister can swim very well.",
+      "I cannot find my blue jacket.",
+      "Can you help me carry this box?",
+      "We can meet after school."
+    ],
+    "question": "He can ___ the guitar.",
+    "options": [
+      "plays",
+      "to play",
+      "play"
+    ],
+    "answer": "play"
+  },
+  {
+    "id": "do-does-questions",
+    "title": "Questions with do and does",
+    "level": "easy",
+    "description": "Ask about habits and everyday activities.",
+    "explanation": "For present simple questions with most verbs, use do with I, you, we, and they, and does with he, she, and it. The main verb stays in its base form after does. Questions with be use am, is, or are instead of do.",
+    "examples": [
+      "Do you walk to work?",
+      "Does your brother like oranges?",
+      "Where do they buy their groceries?",
+      "What time does the lesson begin?"
+    ],
+    "question": "___ your sister work at the library?",
+    "options": [
+      "Do",
+      "Does",
+      "Is"
+    ],
+    "answer": "Does"
+  },
+  {
+    "id": "question-words",
+    "title": "Who, what, where, and when",
+    "level": "easy",
+    "description": "Choose a question word for the information you need.",
+    "explanation": "Use who to ask about a person, what about a thing or activity, where about a place, when about a time, why about a reason, and how about a method or condition. A subject question such as Who lives here? does not need do.",
+    "examples": [
+      "Who teaches your English class?",
+      "Where do you keep your keys?",
+      "When does the shop close?",
+      "Why are you carrying an umbrella?"
+    ],
+    "question": "___ do you live? In Amman.",
+    "options": [
+      "Who",
+      "Where",
+      "When"
+    ],
+    "answer": "Where"
+  },
+  {
+    "id": "object-pronouns",
+    "title": "Me, him, her, us, and them",
+    "level": "easy",
+    "description": "Use pronouns after verbs and prepositions.",
+    "explanation": "Use object pronouns when a person or thing receives an action: me, you, him, her, it, us, and them. They also follow prepositions such as with, for, and to. Compare She knows me with I know her.",
+    "examples": [
+      "Please call me after lunch.",
+      "I sent him a short message.",
+      "Our teacher gives us useful advice.",
+      "These books are heavy, so I will carry them."
+    ],
+    "question": "We are waiting. Please come with ___.",
+    "options": [
+      "we",
+      "our",
+      "us"
+    ],
+    "answer": "us"
+  },
+  {
+    "id": "possessive-apostrophe",
+    "title": "Possession with apostrophes",
+    "level": "easy",
+    "description": "Use a noun to show who owns something.",
+    "explanation": "Add apostrophe + s to most singular nouns: the teacher's desk. Add only an apostrophe to a regular plural ending in -s: the students' books. Irregular plurals without -s take apostrophe + s: the children's room.",
+    "examples": [
+      "My brother's bicycle is green.",
+      "The teacher's bag is on the chair.",
+      "The students' projects are on display.",
+      "The children's shoes are beside the door."
+    ],
+    "question": "Choose the possessive form for one girl: the ___ coat.",
+    "options": [
+      "girl's",
+      "girls'",
+      "girls"
+    ],
+    "answer": "girl's"
+  },
+  {
+    "id": "imperatives",
+    "title": "Instructions and requests",
+    "level": "easy",
+    "description": "Give clear instructions with the base form of a verb.",
+    "explanation": "An imperative usually begins with the base verb and leaves out the subject you. Put do not or don't before the verb for a negative instruction. Adding please can make a request more polite.",
+    "examples": [
+      "Open your book to page ten.",
+      "Please wait near the entrance.",
+      "Do not touch the wet paint.",
+      "Turn left after the bridge."
+    ],
+    "question": "Please ___ your name at the top of the page.",
+    "options": [
+      "writes",
+      "writing",
+      "write"
+    ],
+    "answer": "write"
+  },
+  {
+    "id": "time-prepositions",
+    "title": "At, on, and in for time",
+    "level": "easy",
+    "description": "Say when an event happens.",
+    "explanation": "Use at with clock times, on with days and dates, and in with months, years, seasons, and parts of the day. Common expressions include at night and in the morning. We usually use no preposition before last, next, or every plus a time expression.",
+    "examples": [
+      "The meeting starts at nine o'clock.",
+      "We visit our cousins on Fridays.",
+      "My birthday is in September.",
+      "I will see you next week."
+    ],
+    "question": "Our English lesson is ___ Monday.",
+    "options": [
+      "at",
+      "on",
+      "in"
+    ],
+    "answer": "on"
+  },
+  {
+    "id": "basic-conjunctions",
+    "title": "And, but, or, and because",
+    "level": "easy",
+    "description": "Connect simple ideas and explain a reason.",
+    "explanation": "Use and to add information, but to show a contrast, or to present a choice, and because to give a reason. Choose the connector that describes the relationship between the two parts of your sentence.",
+    "examples": [
+      "I bought bread and cheese.",
+      "The room is small but comfortable.",
+      "Would you like tea or coffee?",
+      "We stayed inside because it was raining."
+    ],
+    "question": "I took an umbrella ___ it was raining.",
+    "options": [
+      "because",
+      "or",
+      "but"
+    ],
+    "answer": "because"
+  },
+  {
+    "id": "some-any",
+    "title": "Some and any",
+    "level": "easy",
+    "description": "Talk about an unspecified amount or number.",
+    "explanation": "Use some in many positive statements and any in many negative statements and questions. Some is also common in offers and requests when a positive answer is expected. Both can be used with plural countable nouns and uncountable nouns.",
+    "examples": [
+      "There are some apples in the basket.",
+      "We do not have any sugar.",
+      "Are there any buses after midnight?",
+      "Would you like some water?"
+    ],
+    "question": "There are not ___ eggs in the fridge.",
+    "options": [
+      "some",
+      "any",
+      "an"
+    ],
+    "answer": "any"
+  },
+  {
+    "id": "adjective-position",
+    "title": "Where adjectives go",
+    "level": "easy",
+    "description": "Describe a noun before it or after the verb be.",
+    "explanation": "An adjective often comes before a noun or after be: a quiet room, the room is quiet. English adjectives normally do not change for plural nouns. Say two red bags, not two reds bags.",
+    "examples": [
+      "She has a small garden.",
+      "The classroom is bright.",
+      "We bought two blue notebooks.",
+      "Those mountains look beautiful."
+    ],
+    "question": "Choose the correct phrase: two ___.",
+    "options": [
+      "greens bags",
+      "green bags",
+      "bags green"
+    ],
+    "answer": "green bags"
+  },
+  {
+    "id": "used-to",
+    "title": "Used to and past habits",
+    "level": "medium",
+    "description": "Describe past habits and situations that have changed.",
+    "explanation": "Use used to plus a base verb for a repeated past action or a past state that is no longer true. In standard questions and negatives with did, use use to without -d. Be used to means be accustomed to and is followed by a noun or an -ing form.",
+    "examples": [
+      "I used to live near the station.",
+      "She used to walk to work every morning.",
+      "Did you use to play basketball?",
+      "We did not use to have a computer at home."
+    ],
+    "question": "Did he ___ to work here?",
+    "options": [
+      "used",
+      "use",
+      "using"
+    ],
+    "answer": "use"
+  },
+  {
+    "id": "zero-conditional",
+    "title": "The zero conditional",
+    "level": "medium",
+    "description": "Talk about general truths and regular consequences.",
+    "explanation": "Use if plus present simple and present simple in the result clause for a general relationship rather than one future event. When can often replace if when the relationship is predictable or repeated.",
+    "examples": [
+      "If you heat ice, it melts.",
+      "Plants grow better if they receive enough light.",
+      "When I stay up late, I feel tired the next day.",
+      "If the shop is closed, we use the other entrance."
+    ],
+    "question": "If water freezes, it ___ into ice.",
+    "options": [
+      "turn",
+      "turns",
+      "turning"
+    ],
+    "answer": "turns"
+  },
+  {
+    "id": "present-perfect-continuous",
+    "title": "Present perfect continuous",
+    "level": "medium",
+    "description": "Emphasize an ongoing or recently finished activity.",
+    "explanation": "Use have or has been followed by a verb ending in -ing. This tense can show how long an activity has continued or explain a present result of recent activity. Many state verbs, such as know, normally use a simple form instead.",
+    "examples": [
+      "I have been learning English for six months.",
+      "She has been waiting since eight o'clock.",
+      "The ground is wet because it has been raining.",
+      "We have been working on the same project all week."
+    ],
+    "question": "She has ___ studying all morning.",
+    "options": [
+      "be",
+      "been",
+      "being"
+    ],
+    "answer": "been"
+  },
+  {
+    "id": "future-continuous",
+    "title": "Future continuous",
+    "level": "medium",
+    "description": "Describe an action in progress at a future moment.",
+    "explanation": "Use will be followed by a verb ending in -ing. This form often describes an activity expected to be in progress at a particular future time. Use will not be for a negative and put will before the subject in a question.",
+    "examples": [
+      "This time tomorrow, I will be flying to Cairo.",
+      "We will be waiting outside the main entrance.",
+      "She will not be working on Friday evening.",
+      "Will you be using the computer at six?"
+    ],
+    "question": "At eight tomorrow, we will be ___ dinner.",
+    "options": [
+      "have",
+      "having",
+      "had"
+    ],
+    "answer": "having"
+  },
+  {
+    "id": "reflexive-pronouns",
+    "title": "Myself, yourself, and themselves",
+    "level": "medium",
+    "description": "Refer back to the subject of a clause.",
+    "explanation": "Use a reflexive pronoun when the object refers to the same person or thing as the subject. By myself means alone or without help. Reflexive pronouns can also add emphasis, as in I made it myself.",
+    "examples": [
+      "I taught myself to play a simple song.",
+      "She introduced herself to the new team.",
+      "The children prepared lunch by themselves.",
+      "We painted the room ourselves."
+    ],
+    "question": "She made the cake by ___.",
+    "options": [
+      "herself",
+      "himself",
+      "myself"
+    ],
+    "answer": "herself"
+  },
+  {
+    "id": "indefinite-pronouns",
+    "title": "Someone, anyone, and everyone",
+    "level": "medium",
+    "description": "Refer to people or things without naming them.",
+    "explanation": "Words ending in -one, -body, and -thing normally take singular verb forms: everyone is ready. Some- forms are common in positive statements, while any- forms are common in questions and negatives. Do not combine nobody with another negative in standard English.",
+    "examples": [
+      "Someone is waiting near the door.",
+      "Does anyone know the answer?",
+      "Everything looks different in the morning.",
+      "Nobody was in the classroom."
+    ],
+    "question": "Everyone ___ ready to leave.",
+    "options": [
+      "are",
+      "is",
+      "be"
+    ],
+    "answer": "is"
+  },
+  {
+    "id": "too-enough",
+    "title": "Too and enough",
+    "level": "medium",
+    "description": "Explain an excessive or sufficient amount.",
+    "explanation": "Put too before an adjective or adverb to mean more than is suitable. Put enough after an adjective or adverb, but before a noun. Too hot means excessively hot, while hot enough means sufficiently hot for a purpose.",
+    "examples": [
+      "The suitcase is too heavy to lift.",
+      "This room is large enough for our meeting.",
+      "We have enough time to finish the exercise.",
+      "She spoke slowly enough for everyone to understand."
+    ],
+    "question": "The box is light ___ to carry.",
+    "options": [
+      "enough",
+      "too",
+      "many"
+    ],
+    "answer": "enough"
+  },
+  {
+    "id": "agreement-so-neither",
+    "title": "So do I and neither do I",
+    "level": "medium",
+    "description": "Agree with a positive or negative statement.",
+    "explanation": "Use so plus an auxiliary verb plus the subject to agree with a positive statement. Use neither or nor with the same pattern to agree with a negative statement. Match the auxiliary to the original verb or tense.",
+    "examples": [
+      "I enjoy reading, and so does my sister.",
+      "She can swim, and so can I.",
+      "I do not eat meat, and neither does he.",
+      "They were not late, and neither were we."
+    ],
+    "question": "I cannot drive. Neither ___ I.",
+    "options": [
+      "do",
+      "can",
+      "am"
+    ],
+    "answer": "can"
+  },
+  {
+    "id": "question-tags",
+    "title": "Question tags",
+    "level": "medium",
+    "description": "Add a short checking question to a statement.",
+    "explanation": "A positive statement usually takes a negative tag, and a negative statement usually takes a positive tag. Use a suitable auxiliary and a pronoun. With an ordinary present simple verb, use do or does in the tag.",
+    "examples": [
+      "You are ready, aren't you?",
+      "She likes coffee, doesn't she?",
+      "They did not call, did they?",
+      "We can park here, can't we?"
+    ],
+    "question": "She works here, ___ she?",
+    "options": [
+      "isn't",
+      "doesn't",
+      "didn't"
+    ],
+    "answer": "doesn't"
+  },
+  {
+    "id": "separable-phrasal-verbs",
+    "title": "Separable phrasal verbs",
+    "level": "medium",
+    "description": "Place objects correctly with verbs such as turn off.",
+    "explanation": "Some phrasal verbs allow a noun object before or after the particle: turn the light off or turn off the light. An object pronoun must go between the verb and particle: turn it off. Other phrasal verbs cannot be separated, so learn each pattern in context.",
+    "examples": [
+      "Please turn the lights off before you leave.",
+      "I wrote the address down in my notebook.",
+      "The music is too loud; please turn it down.",
+      "She picked up the parcel from the desk."
+    ],
+    "question": "The radio is loud. Please turn ___ down.",
+    "options": [
+      "it",
+      "off it",
+      "down it"
+    ],
+    "answer": "it"
+  },
+  {
+    "id": "indirect-questions",
+    "title": "Polite indirect questions",
+    "level": "medium",
+    "description": "Ask for information using statement word order.",
+    "explanation": "After an introduction such as Could you tell me, use subject-before-verb order in the embedded question. Do not add do or does there. Use if or whether to introduce an embedded yes-or-no question.",
+    "examples": [
+      "Could you tell me where the station is?",
+      "Do you know when the lesson starts?",
+      "I wonder whether the shop is open.",
+      "Can you explain how this machine works?"
+    ],
+    "question": "Could you tell me where ___?",
+    "options": [
+      "is the bank",
+      "the bank is",
+      "does the bank"
+    ],
+    "answer": "the bank is"
+  },
+  {
+    "id": "so-such",
+    "title": "So and such",
+    "level": "medium",
+    "description": "Add emphasis to descriptions and results.",
+    "explanation": "Use so before an adjective or adverb without a following noun. Use such before a noun phrase, including any adjective. A singular countable noun normally needs a or an after such. Use that to introduce a result.",
+    "examples": [
+      "The lesson was so interesting that I took extra notes.",
+      "It was such a useful book that I read it twice.",
+      "She spoke so clearly that everyone understood.",
+      "They are such friendly neighbors."
+    ],
+    "question": "It was ___ a cold day that we stayed indoors.",
+    "options": [
+      "so",
+      "such",
+      "too"
+    ],
+    "answer": "such"
+  },
+  {
+    "id": "future-perfect",
+    "title": "Future perfect",
+    "level": "hard",
+    "description": "Look back from a future point at a completed action.",
+    "explanation": "Use will have followed by a past participle to describe an action completed by a future time. By and by the time often identify the deadline. In the time clause after by the time, a present form commonly refers to the future.",
+    "examples": [
+      "By Friday, we will have finished the report.",
+      "She will have left by the time you arrive.",
+      "I will have saved enough money by December.",
+      "Will they have completed the bridge by next summer?"
+    ],
+    "question": "By noon tomorrow, I will have ___ the task.",
+    "options": [
+      "finish",
+      "finished",
+      "finishing"
+    ],
+    "answer": "finished"
+  },
+  {
+    "id": "past-perfect-continuous",
+    "title": "Past perfect continuous",
+    "level": "hard",
+    "description": "Describe an activity continuing before another past event.",
+    "explanation": "Use had been followed by a verb ending in -ing. This form emphasizes the duration or continuing nature of an earlier past activity, often to explain a later past situation. State verbs generally prefer a simple form.",
+    "examples": [
+      "We had been walking for hours when we found the village.",
+      "She was tired because she had been studying all night.",
+      "It had been raining, so the path was muddy.",
+      "They had been waiting for twenty minutes before the doors opened."
+    ],
+    "question": "He had been ___ for an hour when I called.",
+    "options": [
+      "work",
+      "worked",
+      "working"
+    ],
+    "answer": "working"
+  },
+  {
+    "id": "mixed-conditionals",
+    "title": "Mixed conditionals",
+    "level": "hard",
+    "description": "Connect an unreal past condition with a present result.",
+    "explanation": "A common mixed conditional uses if plus past perfect for an unreal past event and would plus a base verb for its present consequence. Another pattern uses an unreal present condition to explain an imagined past outcome. Choose forms that match the time relationship.",
+    "examples": [
+      "If I had learned to drive, I would be more independent now.",
+      "If she had accepted the job, she would live abroad now.",
+      "If we had brought the map, we would know where we are.",
+      "If I were more organized, I would not have missed yesterday's meeting."
+    ],
+    "question": "If I had slept well, I ___ be tired now.",
+    "options": [
+      "will not",
+      "would not",
+      "had not"
+    ],
+    "answer": "would not"
+  },
+  {
+    "id": "wish-if-only",
+    "title": "Wish and if only",
+    "level": "hard",
+    "description": "Express unreal wishes and regrets.",
+    "explanation": "Use wish plus a past form for a present situation you want to change. Use wish plus past perfect for regret about the past. Wish plus would can express a desired change in behavior or circumstances. If only expresses a similar, often stronger wish.",
+    "examples": [
+      "I wish I knew the answer.",
+      "She wishes she had accepted the invitation.",
+      "I wish the neighbors would turn the music down.",
+      "If only we had checked the timetable earlier."
+    ],
+    "question": "I missed the train. I wish I ___ left earlier.",
+    "options": [
+      "have",
+      "had",
+      "would"
+    ],
+    "answer": "had"
+  },
+  {
+    "id": "negative-inversion",
+    "title": "Inversion after negative expressions",
+    "level": "hard",
+    "description": "Use a formal word order for emphasis.",
+    "explanation": "When a negative or restrictive expression such as never, rarely, or not until begins a clause for emphasis, put an auxiliary before the subject. Add do, does, or did when a simple verb has no auxiliary. With not until, the inversion is in the main clause.",
+    "examples": [
+      "Never have I seen such a clear night sky.",
+      "Rarely does the library close before sunset.",
+      "Not until the rain stopped did we leave.",
+      "Only after checking the figures did she approve the report."
+    ],
+    "question": "Never ___ I seen such a beautiful view.",
+    "options": [
+      "have",
+      "am",
+      "do"
+    ],
+    "answer": "have"
+  },
+  {
+    "id": "participle-clauses",
+    "title": "Participle clauses",
+    "level": "hard",
+    "description": "Connect related actions without repeating the subject.",
+    "explanation": "A participle clause can give information about time, reason, or circumstance. Its understood subject normally matches the subject of the main clause. Use having plus a past participle to emphasize that an action was completed first. Avoid a dangling participle with an unrelated main subject.",
+    "examples": [
+      "Walking through the market, I noticed a familiar face.",
+      "Having finished the report, she turned off the computer.",
+      "Surprised by the question, he paused before answering.",
+      "Knowing the route, we left the map at home."
+    ],
+    "question": "___ finished her work, she went home.",
+    "options": [
+      "Having",
+      "Have",
+      "Has"
+    ],
+    "answer": "Having"
+  },
+  {
+    "id": "perfect-modals",
+    "title": "Must have, might have, and cannot have",
+    "level": "hard",
+    "description": "Make deductions about a past event.",
+    "explanation": "Use a modal followed by have and a past participle to discuss the past. Must have expresses a strong positive deduction; might have or may have expresses possibility. Cannot have or can't have expresses a strong negative deduction. These forms describe your judgment, not certain proof.",
+    "examples": [
+      "The streets are wet; it must have rained overnight.",
+      "She might have taken the earlier train.",
+      "He cannot have read the message because his phone was off.",
+      "They may have forgotten to write down the address."
+    ],
+    "question": "She ___ have left already; I am not sure.",
+    "options": [
+      "might",
+      "is",
+      "did"
+    ],
+    "answer": "might"
+  },
+  {
+    "id": "causative-have-get",
+    "title": "Have and get something done",
+    "level": "hard",
+    "description": "Describe arranging for someone else to do a job.",
+    "explanation": "Use have or get followed by an object and a past participle when you arrange for another person to do something: have the car repaired. Change the tense of have or get, not the participle. The same structure can sometimes describe an unwanted experience, such as having a wallet stolen.",
+    "examples": [
+      "I had my bicycle repaired yesterday.",
+      "We are getting the windows cleaned this week.",
+      "She has her eyes tested every year.",
+      "They will have the kitchen painted before moving in."
+    ],
+    "question": "We had the roof ___ last month.",
+    "options": [
+      "repair",
+      "repaired",
+      "repairing"
+    ],
+    "answer": "repaired"
+  },
+  {
+    "id": "cleft-sentences",
+    "title": "Cleft sentences for emphasis",
+    "level": "hard",
+    "description": "Highlight one part of a message.",
+    "explanation": "An it-cleft uses it is or it was plus the focused information and a relative clause, often introduced by that. A what-cleft begins with a what-clause and uses be to introduce the focus. These patterns change emphasis without changing the basic event.",
+    "examples": [
+      "It was Maya who found the missing notebook.",
+      "It was on Tuesday that we first met.",
+      "What I need is a quiet place to study.",
+      "What surprised me was the kindness of the strangers."
+    ],
+    "question": "It was yesterday ___ she called.",
+    "options": [
+      "that",
+      "what",
+      "whose"
+    ],
+    "answer": "that"
+  },
+  {
+    "id": "few-little-quantifiers",
+    "title": "Few, a few, little, and a little",
+    "level": "hard",
+    "description": "Distinguish a small useful amount from almost none.",
+    "explanation": "Use few and a few with plural countable nouns, and little and a little with uncountable nouns. A few and a little emphasize that some is available. Few and little often emphasize a shortage. The difference depends on whether the speaker sees the amount as enough or not.",
+    "examples": [
+      "We have a few minutes, so we can check the answer.",
+      "Few students chose the earliest class.",
+      "There is a little milk left for your coffee.",
+      "We have little time, so we must leave immediately."
+    ],
+    "question": "We have ___ water left, so we must get more immediately.",
+    "options": [
+      "few",
+      "little",
+      "a few"
+    ],
+    "answer": "little"
+  },
+  {
+    "id": "dependent-prepositions",
+    "title": "Adjectives and their prepositions",
+    "level": "hard",
+    "description": "Learn useful combinations such as interested in.",
+    "explanation": "Many adjectives commonly occur with a particular preposition, such as interested in, responsible for, aware of, and good at. Learn the combination as a unit. A verb after the preposition normally takes an -ing form rather than an infinitive.",
+    "examples": [
+      "She is interested in learning another language.",
+      "Who is responsible for organizing the meeting?",
+      "We were not aware of the change in schedule.",
+      "He is good at explaining complicated ideas."
+    ],
+    "question": "They are interested ___ joining the workshop.",
+    "options": [
+      "at",
+      "in",
+      "for"
+    ],
+    "answer": "in"
+  },
+  {
+    "id": "reported-questions",
+    "title": "Reported questions",
+    "level": "hard",
+    "description": "Report a question using statement word order.",
+    "explanation": "After asked, use the original question word for a wh-question, or if or whether for a yes-or-no question. Use subject-before-verb order and remove do, does, or did as a question auxiliary. Tense, pronouns, and time references may change with the context.",
+    "examples": [
+      "She asked where I lived.",
+      "He asked whether the museum was open.",
+      "They asked what time the train would leave.",
+      "I asked why she had left the meeting early."
+    ],
+    "question": "She asked where ___.",
+    "options": [
+      "did I live",
+      "I lived",
+      "do I live"
+    ],
+    "answer": "I lived"
   }
 ]
