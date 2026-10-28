@@ -1,0 +1,114 @@
+@media (min-width: 640px) {
+  .settings-row {
+    grid-template-columns: 46px minmax(0, 1fr) 52px;
+    grid-template-areas: 'icon title toggle' 'icon body toggle';
+    align-items: start;
+    column-gap: 20px;
+    row-gap: 8px;
+    padding-block: 28px;
+  }
+  .settings-row-icon {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero-art {
+    right: 5px;
+    transform: scale(0.8);
+    transform-origin: right center;
+    opacity: 0.65;
+  }
+}
+@media (max-width: 1023px) {
+  .main-nav .nav-link {
+    justify-content: center;
+    min-height: 44px;
+  }
+}
+@media (max-width: 767px) {
+  .site-container {
+    width: calc(100% - 32px);
+  }
+  .nav-link {
+    font-size: 11px;
+    padding: 10px 4px;
+    gap: 5px;
+  }
+  .mode-card {
+    padding: 18px;
+  }
+  .mode-card h3 {
+    font-size: 16px;
+  }
+  .mode-card p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+  .hero {
+    padding: 28px 24px;
+  }
+  .hero h1,
+  .hero h2 {
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+  .typing-panel {
+    padding: 24px 20px;
+    min-height: 260px;
+  }
+  .typing-panel > div:first-child {
+    flex-wrap: wrap;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+  .typing-panel > div:first-child > span:first-child {
+    flex: 1 1 160px;
+  }
+  .typing-text {
+    font-size: 21px;
+    line-height: 1.8;
+  }
+  input:not([type='range']),
+  select {
+    font-size: 16px;
+  }
+  button:not(.settings-switch),
+  a {
+    touch-action: manipulation;
+  }
+  .grid-cols-4 .tracking-widest {
+    font-size: 8px;
+    letter-spacing: 0.06em;
+  }
+}
+@media (max-width: 359px) {
+  .site-container {
+    width: calc(100% - 24px);
+  }
+  .mode-card {
+    padding: 14px;
+  }
+  .nav-link {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 10px;
+  }
+  .primary-button,
+  .secondary-button {
+    padding-inline: 13px;
+  }
+  .hero {
+    padding-inline: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

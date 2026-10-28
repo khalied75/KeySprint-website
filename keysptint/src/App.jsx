@@ -7,17 +7,27 @@ import Learn from './pages/Learn'
 import Progress from './pages/Progress'
 import About from './pages/About'
 import Settings from './pages/Settings'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import { SettingsProvider } from './context/SettingsContext'
 
 export default function App() {
-  return <SettingsProvider><BrowserRouter><Routes><Route element={<Layout />}>
-    <Route index element={<Home />} />
-    <Route path="games" element={<Games />} />
-    <Route path="practice" element={<Practice />} />
-    <Route path="learn" element={<Learn />} />
-    <Route path="progress" element={<Progress />} />
-    <Route path="about" element={<About />} />
-    <Route path="settings" element={<Settings />} />
-    <Route path="*" element={<About notFound />} />
-  </Route></Routes></BrowserRouter></SettingsProvider>
+  return (
+    <SettingsProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="games" element={<Games />} />
+            <Route path="practice" element={<Practice />} />
+            <Route path="learn" element={<Learn />} />
+            <Route path="progress" element={<Progress />} />
+            <Route path="about" element={<About />} />
+            <Route path="settings" element={<Settings />} />
+            <Route path="privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="*" element={<About notFound />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </SettingsProvider>
+  )
 }

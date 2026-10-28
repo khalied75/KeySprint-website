@@ -1,0 +1,33 @@
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  --page: #f7f8fc;
+  --surface: #ffffff;
+  --surface-muted: #f3f4f8;
+  --foreground: #222b46;
+  --line: #e5e7ee;
+  --muted: #737c92;
+  --selection: #efedfc;
+}
+
+:root[data-theme='dark'] {
+  --page: #101426;
+  --surface: #1b2138;
+  --surface-muted: #252d47;
+  --foreground: #e8ecfa;
+  --line: #343e5b;
+  --muted: #a9b3ce;
+  --selection: #302b51;
+}
+
+@theme {
+  --font-sans: 'Segoe UI', 'Inter', Arial, sans-serif;
+  --color-violet-50: #f0eefd;
+  --color-violet-100: #e7e2fc;
+  --color-violet-200: #cdc8f8;
+  --color-violet-300: #b0a8f1;
+  --color-violet-400: #8b7ee7;
+  --color-violet-500: #7464db;
+  --color-violet-600: #6656dc;
+  --color-violet-700: #5646c5;
+}

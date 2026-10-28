@@ -1,0 +1,45 @@
+@layer base {
+  html {
+    min-width: 280px;
+    scroll-padding-top: 20px;
+  }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--foreground);
+    -webkit-font-smoothing: antialiased;
+  }
+  .grid > *,
+  .flex > * {
+    min-width: 0;
+  }
+  input,
+  select {
+    max-width: 100%;
+  }
+  button,
+  a,
+  input,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  select {
+    cursor: pointer;
+  }
+  button:disabled,
+  input:disabled,
+  select:disabled {
+    cursor: default;
+    opacity: 0.55;
+  }
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid #9d91ee;
+    outline-offset: 4px;
+  }
+  ::selection {
+    background: #d8d0ff;
+    color: #222b46;
+  }
+}

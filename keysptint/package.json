@@ -4,11 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "content:stats": "node scripts/update-content-stats.mjs",
+    "predev": "npm run content:stats",
+    "prebuild": "npm run content:stats",
+    "pretest": "npm run content:stats",
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "test": "node --test"
+    "test": "node --test",
+    "format": "prettier --write src tests scripts index.html vite.config.js package.json .prettierrc.json README.md",
+    "format:check": "prettier --check src tests scripts index.html vite.config.js package.json .prettierrc.json README.md"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
@@ -22,6 +28,7 @@
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
     "oxlint": "^1.88.0",
+    "prettier": "^3.9.10",
     "vite": "^8.3.4"
   }
 }

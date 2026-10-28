@@ -24,8 +24,13 @@ src/
   App.jsx                 React Router routes
   Layout.jsx              Shared navigation, Outlet, footer
   main.jsx                React entry point
-  index.css               Tailwind theme and reusable styles
+  index.css               Tailwind and stylesheet imports
+  styles/                 Theme, base rules, components, dark mode, hero, responsive rules
   components/             Shared UI, Google Play notice, learning cards, vocabulary explorer
+    challenge/            Difficulty, time limit, word filters
+    games/                Game challenge picker
+    home/                 Hero, practice mode picker, progress summary
+    practice/             Session header, score, metrics, exercise, input, result
   pages/                  Home, Games, Practice, Learn, Progress, About
   hooks/useTraining.js    Typing, timers, rounds, and session state
   context/SettingsContext.jsx Theme and keyboard sound preferences
@@ -34,9 +39,9 @@ src/
   utils/                  Typing comparison, game helpers, browser storage
 public/public json/
   words.json              Words by difficulty and category (original data)
-  sentences.json          3,276 sentence exercises
-  paragraphs.json         1,104 paragraphs
-  grammar.json            24 grammar lessons and mini quizzes
+  sentences.json          Sentence exercises by difficulty
+  paragraphs.json         Paragraphs by difficulty
+  grammar.json            Grammar lessons and mini quizzes
   content-stats.json      Library totals and counts per difficulty
 public/favicon.svg        Lightweight brand icon
 scripts/expand-content.mjs Repeatable content expansion; preserves existing entries
@@ -57,13 +62,23 @@ Mobile layouts use a two-row navigation header, touch-sized controls, wrapping c
 
 WPM uses five correct keystrokes per word. In standard typing modes, accuracy uses entered keystrokes, including corrected mistakes. In recall/detective modes, each wrong guess counts as one mistake and correct answers contribute their letter count. Results from these games therefore measure different skills from ordinary typing.
 
-The vocabulary library contains 2,480 entries across levels and categories. All lesson files ship with the site; there is no external word API or account requirement. This does not install a service worker for offline reloads.
+Library totals are calculated directly from the current words, sentences, paragraphs, and grammar files. Vocabulary totals count entries across all levels and categories. Refresh the page after editing lesson JSON to load the latest data. All lesson files ship with the site; there is no external word API or account requirement. This does not install a service worker for offline reloads.
+
+`npm run content:stats` refreshes the `content-stats.json` snapshot without changing any lessons. It also runs automatically before development, production builds, and tests. The UI calculates totals from lesson data instead of relying on this snapshot.
 
 To rebuild the expanded content, run `node scripts/expand-content.mjs`. The script keeps existing entries, merges level-specific vocabulary and topical passages, removes duplicates, and updates library statistics. Paragraphs use linked sentences from the same topic, with variations in introductions and reflections.
 
 ## Deployment
 
+The footer links to `/privacy-policy`. Policy content and the privacy contact email live in `src/data/privacyPolicy.js`. The current policy describes this web implementation. Before using its deployed public URL in Google Play Console, review the Android build's permissions, SDKs, advertising, analytics, data handling, and developer details; update the policy to match the released app. The host must serve this route publicly without authentication.
+
 `npm run build` outputs `dist/`. Configure your static host to rewrite unknown application paths to `/index.html` so React Router deep links work. For a subdirectory deployment, configure Vite's `base` and BrowserRouter's `basename` together. The default assumes deployment at the domain root.
+
+## Code formatting and navigation
+
+Page files coordinate state and navigation. Their UI sections live in the matching `components/home`, `components/games`, and `components/practice` folders. `hooks/useTraining.js` owns session behavior; `utils/trainingDisplay.js` owns prompt labels and character highlighting. Keep new UI in the relevant folder rather than extending a page with unrelated sections.
+
+Run `npm run format` to format source files, tests, and scripts with Prettier. Run `npm run format:check` to check formatting without changing files. The formatter skips lesson JSON, build output, dependencies, and the lockfile.
 
 ## Verification
 

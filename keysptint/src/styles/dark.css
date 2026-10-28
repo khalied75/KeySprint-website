@@ -1,0 +1,117 @@
+/* Match the existing Tailwind surfaces to the shared theme across every page. */
+[data-theme='dark']
+  :is([class~='bg-white'], [class~='bg-white/80'], [class~='bg-white/60']) {
+  background-color: var(--surface);
+}
+[data-theme='dark']
+  :is([class~='bg-slate-50'], [class~='bg-[#f3f3f9]'], [class~='bg-[#e6e7f2]']) {
+  background-color: var(--surface-muted);
+}
+[data-theme='dark']
+  :is(
+    [class~='bg-violet-50'],
+    [class~='bg-violet-50/50'],
+    [class~='bg-violet-50/60'],
+    [class~='bg-violet-100'],
+    [class~='bg-[#efedfc]']
+  ) {
+  background-color: #2b294a;
+}
+[data-theme='dark'] [class~='bg-violet-100!'] {
+  background-color: #383158 !important;
+}
+[data-theme='dark']
+  :is(
+    [class~='bg-[#fff7e2]'],
+    [class~='bg-[#fff6e0]'],
+    [class~='bg-[#ffedbc]'],
+    [class~='bg-amber-50']
+  ) {
+  background-color: #3b3227;
+}
+[data-theme='dark'] [class~='bg-emerald-50'] {
+  background-color: #203a37;
+}
+[data-theme='dark']
+  :is([class~='text-slate-400'], [class~='text-slate-500'], [class~='text-slate-600']) {
+  color: #aeb8cf;
+}
+[data-theme='dark']
+  :is(
+    [class~='text-violet-500'],
+    [class~='text-violet-600'],
+    [class~='text-violet-700']
+  ) {
+  color: #b9adff;
+}
+[data-theme='dark'] [class~='text-violet-600!'] {
+  color: #c3b8ff !important;
+}
+[data-theme='dark']
+  :is(
+    [class~='text-[#9b8b65]'],
+    [class~='text-[#8a7950]'],
+    [class~='text-[#b78929]'],
+    [class~='text-amber-600']
+  ) {
+  color: #dfbc7a;
+}
+[data-theme='dark'] [class~='text-red-600'] {
+  color: #fda4af;
+}
+[data-theme='dark'] [class~='text-emerald-600'] {
+  color: #6ee7b7;
+}
+[data-theme='dark']
+  :is(
+    [class~='border-slate-100'],
+    [class~='border-slate-200'],
+    [class~='border-[#e6e7ef]'],
+    [class~='border-[#e3e5ef]'],
+    [class~='sm:border-[#ececf3]']
+  ) {
+  border-color: var(--line);
+}
+[data-theme='dark']
+  :is(
+    [class~='border-violet-100'],
+    [class~='border-violet-200/70'],
+    [class~='border-amber-200/60']
+  ) {
+  border-color: #48415f;
+}
+[data-theme='dark'] [class~='divide-slate-100'] > :not(:last-child) {
+  border-color: var(--line);
+}
+[data-theme='dark'] .nav-link {
+  color: #aeb8cf;
+}
+[data-theme='dark'] .nav-link:hover,
+[data-theme='dark'] .nav-link.active {
+  background: #302b51;
+  color: #c3b8ff;
+}
+[data-theme='dark'] .step,
+[data-theme='dark'] .selected .icon-tile {
+  background: #39315d;
+  color: #c3b8ff;
+}
+[data-theme='dark'] .selection-dot {
+  border-color: #646b85;
+}
+[data-theme='dark'] .selection-dot.checked {
+  background: #8070df;
+  border-color: #8070df;
+}
+[data-theme='dark'] .field:focus {
+  box-shadow: 0 0 0 3px #39315d;
+}
+[data-theme='dark'] [class~='focus-within:ring-violet-100']:focus-within {
+  --tw-ring-color: #39315d;
+}
+[data-theme='dark'] [class~='hover:bg-slate-50']:hover {
+  background-color: #303954;
+}
+[data-theme='dark'] [class~='hover:bg-amber-100']:hover {
+  background-color: #4b3c2a;
+}

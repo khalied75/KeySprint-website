@@ -1,23 +1,23 @@
 {
   "grammar": 24,
-  "words": 2480,
-  "sentences": 3276,
-  "paragraphs": 1104,
+  "words": 7360,
+  "sentences": 1786,
+  "paragraphs": 420,
   "levels": {
     "easy": {
-      "words": 925,
-      "sentences": 1092,
-      "paragraphs": 368
+      "words": 2220,
+      "sentences": 600,
+      "paragraphs": 140
     },
     "medium": {
-      "words": 854,
-      "sentences": 1092,
-      "paragraphs": 368
+      "words": 3367,
+      "sentences": 587,
+      "paragraphs": 140
     },
     "hard": {
-      "words": 701,
-      "sentences": 1092,
-      "paragraphs": 368
+      "words": 1773,
+      "sentences": 599,
+      "paragraphs": 140
     }
   }
 }

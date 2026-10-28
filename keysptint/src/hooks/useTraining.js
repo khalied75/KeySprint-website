@@ -22,18 +22,30 @@ export default function useTraining(settings) {
   const guessing = isWordGame(settings.game)
   const timed = isTimedGame(settings.game)
   const timeLimit = normalizeDuration(settings.duration)
-  const accuracy = counts.correct + counts.mistakes ? Math.round(counts.correct / (counts.correct + counts.mistakes) * 100) : 100
+  const accuracy =
+    counts.correct + counts.mistakes
+      ? Math.round((counts.correct / (counts.correct + counts.mistakes)) * 100)
+      : 100
   const wpm = elapsed > 0 ? Math.round(counts.correct / 5 / (elapsed / 60)) : 0
 
   useEffect(() => {
     const token = ++request.current
-    getExercise(settings).then(value => {
-      if (token !== request.current) return
-      setText(value); setScrambled(scrambleWord(value)); setStatus('ready')
-    }).catch(e => {
-      if (token === request.current) { setError(e.message); setStatus('error') }
-    })
-    return () => { request.current++ }
+    getExercise(settings)
+      .then((value) => {
+        if (token !== request.current) return
+        setText(value)
+        setScrambled(scrambleWord(value))
+        setStatus('ready')
+      })
+      .catch((e) => {
+        if (token === request.current) {
+          setError(e.message)
+          setStatus('error')
+        }
+      })
+    return () => {
+      request.current++
+    }
   }, [settings, attempt])
 
   // Keep the session clock running while the next exercise loads.
@@ -57,11 +69,25 @@ export default function useTraining(settings) {
     if (finished.current) return
     finished.current = true
     request.current++
-    const duration = started.current !== null ? Math.max(1, Math.ceil((Date.now() - started.current) / 1000)) : 0
+    const duration =
+      started.current !== null
+        ? Math.max(1, Math.ceil((Date.now() - started.current) / 1000))
+        : 0
     const seconds = timed ? Math.min(timeLimit, duration) : duration
     const finalWpm = seconds ? Math.round(counts.correct / 5 / (seconds / 60)) : 0
-    setElapsed(seconds); setStatus('done')
-    saveResult({ mode: settings.game || settings.mode, difficulty: settings.difficulty, wpm: finalWpm, accuracy, mistakes: counts.mistakes, seconds, score: counts.correct * 10, rounds: counts.rounds, timeLimit: timed ? timeLimit : null })
+    setElapsed(seconds)
+    setStatus('done')
+    saveResult({
+      mode: settings.game || settings.mode,
+      difficulty: settings.difficulty,
+      wpm: finalWpm,
+      accuracy,
+      mistakes: counts.mistakes,
+      seconds,
+      score: counts.correct * 10,
+      rounds: counts.rounds,
+      timeLimit: timed ? timeLimit : null,
+    })
   }, [settings, timed, timeLimit, accuracy, counts])
 
   useEffect(() => {
@@ -74,51 +100,128 @@ export default function useTraining(settings) {
 
   async function nextRound() {
     const token = ++request.current
-    setStatus('loading'); setInput(''); setRevealed(true)
+    setStatus('loading')
+    setInput('')
+    setRevealed(true)
     try {
       const value = await getExercise(settings)
       if (token !== request.current || finished.current) return
-      setText(value); setScrambled(scrambleWord(value)); setStatus(memory ? 'ready' : 'running')
+      setText(value)
+      setScrambled(scrambleWord(value))
+      setStatus(memory ? 'ready' : 'running')
     } catch (e) {
-      if (token === request.current) { setError(e.message); setStatus('error') }
+      if (token === request.current) {
+        setError(e.message)
+        setStatus('error')
+      }
     }
   }
 
   function expired() {
-    if (timed && started.current !== null && Date.now() - started.current >= timeLimit * 1000) { finish(); return true }
+    if (
+      timed &&
+      started.current !== null &&
+      Date.now() - started.current >= timeLimit * 1000
+    ) {
+      finish()
+      return true
+    }
     return false
   }
 
   function change(value) {
-    if (finished.current || !['ready', 'running'].includes(status) || (memory && revealed) || expired()) return
-    if (status === 'ready') { started.current ??= Date.now(); setStatus('running') }
+    if (
+      finished.current ||
+      !['ready', 'running'].includes(status) ||
+      (memory && revealed) ||
+      expired()
+    )
+      return
+    if (status === 'ready') {
+      started.current ??= Date.now()
+      setStatus('running')
+    }
     setFeedback('')
-    if (guessing) { setInput(value.slice(0, 40)); return }
+    if (guessing) {
+      setInput(value.slice(0, 40))
+      return
+    }
     if (value.length > text.length) return
     const { correct, mistakes } = evaluateEdit(input, value, text)
-    setCounts(previous => ({ ...previous, correct: previous.correct + correct, mistakes: previous.mistakes + mistakes, combo: mistakes ? 0 : previous.combo + correct, rounds: previous.rounds + (value === text ? 1 : 0) }))
+    setCounts((previous) => ({
+      ...previous,
+      correct: previous.correct + correct,
+      mistakes: previous.mistakes + mistakes,
+      combo: mistakes ? 0 : previous.combo + correct,
+      rounds: previous.rounds + (value === text ? 1 : 0),
+    }))
     setInput(value)
-    if (value === text && settings.game && !(settings.game === 'survival' && counts.mistakes + mistakes >= 3)) nextRound()
+    if (
+      value === text &&
+      settings.game &&
+      !(settings.game === 'survival' && counts.mistakes + mistakes >= 3)
+    )
+      nextRound()
   }
 
   function submitGuess(event) {
     event.preventDefault()
     if (!input.trim() || status !== 'running' || finished.current || expired()) return
     if (input.trim().toLowerCase() !== text.toLowerCase()) {
-      setCounts(previous => ({ ...previous, mistakes: previous.mistakes + 1, combo: 0 }))
-      setFeedback(settings.game === 'scramble' ? 'Not quite. Use every letter once and try another order.' : 'Not quite. Think about the word and try again.')
+      setCounts((previous) => ({
+        ...previous,
+        mistakes: previous.mistakes + 1,
+        combo: 0,
+      }))
+      setFeedback(
+        settings.game === 'scramble'
+          ? 'Not quite. Use every letter once and try another order.'
+          : 'Not quite. Think about the word and try again.',
+      )
       setInput('')
       return
     }
-    setCounts(previous => ({ ...previous, correct: previous.correct + text.length, combo: previous.combo + 1, rounds: previous.rounds + 1 }))
+    setCounts((previous) => ({
+      ...previous,
+      correct: previous.correct + text.length,
+      combo: previous.combo + 1,
+      rounds: previous.rounds + 1,
+    }))
     if (timed || counts.rounds + 1 < 5) nextRound()
   }
 
   function restart() {
-    request.current++; started.current = null; finished.current = false
-    setStatus('loading'); setInput(''); setElapsed(0); setError(''); setRevealed(true); setFeedback('')
-    setCounts({ correct: 0, mistakes: 0, rounds: 0, combo: 0 }); setAttempt(previous => previous + 1)
+    request.current++
+    started.current = null
+    finished.current = false
+    setStatus('loading')
+    setInput('')
+    setElapsed(0)
+    setError('')
+    setRevealed(true)
+    setFeedback('')
+    setCounts({ correct: 0, mistakes: 0, rounds: 0, combo: 0 })
+    setAttempt((previous) => previous + 1)
   }
 
-  return { text, scrambled, input, status, error, elapsed, counts, revealed, feedback, accuracy, wpm, guessing, timed, timeLimit, change, submitGuess, restart, finish }
+  return {
+    text,
+    scrambled,
+    input,
+    status,
+    error,
+    elapsed,
+    counts,
+    revealed,
+    feedback,
+    accuracy,
+    wpm,
+    guessing,
+    timed,
+    timeLimit,
+    change,
+    submitGuess,
+    restart,
+    finish,
+  }
 }

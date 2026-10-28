@@ -2,21 +2,75 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router'
 import Icon from '../components/Icon'
 import ChallengeSettings from '../components/ChallengeSettings'
-import { modes } from '../data/modes'
+import HomeHero from '../components/home/HomeHero'
+import PracticeModePicker from '../components/home/PracticeModePicker'
+import PracticeSummary from '../components/home/PracticeSummary'
 import { getHistory } from '../utils/storage'
 import GooglePlayComingSoon from '../components/GooglePlayComingSoon'
 
 export default function Home() {
-  const [settings, setSettings] = useState({ mode: 'letters', difficulty: 'easy', category: 'common', length: '', starts: '' })
+  const [settings, setSettings] = useState({
+    mode: 'letters',
+    difficulty: 'easy',
+    category: 'common',
+    length: '',
+    starts: '',
+  })
   const navigate = useNavigate()
   const history = getHistory()
-  return <>
-    <div className="mb-7 flex items-end justify-between"><div><p className="eyebrow mb-2">YOUR DAILY DOSE OF PROGRESS</p><h1 className="text-2xl font-bold tracking-tight">A good day to get better<span className="text-violet-500">.</span></h1></div><span className="hidden items-center gap-2 text-xs text-slate-400 sm:flex"><span className="h-2 w-2 rounded-full bg-emerald-400" />Your own pace. Your own progress.</span></div>
-    <section className="hero relative mb-8 overflow-hidden rounded-[26px] px-8 py-10 md:px-12 md:py-12"><div className="relative z-10 max-w-xl"><p className="mb-5 text-[11px] font-bold tracking-[.22em] text-violet-200">MAKE EVERY KEYSTROKE COUNT</p><h2 className="mb-4 text-4xl font-extrabold tracking-[-1.6px] md:text-[50px]">Find your rhythm.</h2><p className="max-w-md text-base leading-7 text-[#d0d1ed]">A little more confidence. A little more flow.<br />Build your English, one keystroke at a time.</p><div className="mt-8 flex flex-wrap items-center gap-4 text-[11px] text-violet-200"><span className="flex items-center gap-1.5"><Icon name="check" className="h-3.5 w-3.5" />Learn by doing</span><span>·</span><span>Practice at your pace</span><span>·</span><span>Make it a habit</span></div></div><div className="hero-art hidden md:block" aria-hidden="true"><div className="orbit orbit-one" /><div className="orbit orbit-two" /><div className="floating-key key-one">A</div><div className="floating-key key-two">a<span>→</span></div><div className="floating-key key-three"><Icon name="bolt" className="h-12 w-12" /></div><div className="floating-key key-four">↵</div><span className="spark spark-one">+</span><span className="spark spark-two">✧</span></div></section>
-    <div className="grid items-start gap-7 lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[1.65fr_1fr]"><div><div className="mb-5 flex items-center gap-3"><span className="step">01</span><h2 className="text-xl font-bold">Choose a practice mode</h2><span className="ml-auto hidden text-xs text-slate-400 sm:block">Small steps. Real skills.</span></div><div className="grid grid-cols-2 gap-4">{modes.map(mode => <button key={mode.id} onClick={() => setSettings({ ...settings, mode: mode.id })} aria-pressed={settings.mode === mode.id} className={`mode-card group ${settings.mode === mode.id ? 'selected' : ''}`}><div className="mb-7 flex items-center justify-between"><span className="icon-tile"><Icon name={mode.icon} className="h-6 w-6" /></span><span className={`selection-dot ${settings.mode === mode.id ? 'checked' : ''}`}>{settings.mode === mode.id && <Icon name="check" className="h-3 w-3" />}</span></div><h3 className="mb-1 text-lg font-bold">{mode.name}</h3><p className="text-sm text-slate-400">{mode.description}</p></button>)}</div>
-    <Link to="/games" className="mt-5 flex items-center gap-4 rounded-2xl border border-amber-200/60 bg-[#fff7e2] p-5 transition hover:bg-amber-100"><span className="rounded-xl bg-[#ffedbc] p-3 text-[#b78929]"><Icon name="game" className="h-6 w-6" /></span><div><h3 className="mb-1 font-bold">A little challenge?</h3><p className="text-xs text-[#9b8b65]">Beat the clock, build a combo, beat your best.</p></div><Icon name="arrow" className="ml-auto h-5 w-5 text-[#b78929]" /></Link>
-    </div><ChallengeSettings settings={settings} onChange={setSettings} onStart={() => navigate(`/practice?${new URLSearchParams(settings)}`)} /></div>
-    <section className="mt-9 grid gap-5 rounded-2xl border border-[#e6e7ef] bg-white/60 p-6 sm:grid-cols-3"><div className="flex items-center gap-4"><span className="rounded-xl bg-violet-50 p-3 text-violet-500"><Icon name="chart" /></span><div><p className="text-lg font-bold">{history.length}</p><p className="text-xs text-slate-400">Sessions completed</p></div></div><div className="flex items-center gap-4 sm:border-l sm:border-[#ececf3] sm:pl-7"><span className="rounded-xl bg-emerald-50 p-3 text-emerald-500"><Icon name="timer" /></span><div><p className="text-lg font-bold">{Math.max(0, ...history.map(item => item.wpm))}<span className="ml-1 text-xs font-normal text-slate-400">WPM</span></p><p className="text-xs text-slate-400">Your personal best</p></div></div><div className="flex items-center gap-4 sm:border-l sm:border-[#ececf3] sm:pl-7"><span className="rounded-xl bg-amber-50 p-3 text-amber-500"><Icon name="trophy" /></span><div><p className="text-sm font-semibold">Progress over perfection</p><p className="mt-1 text-xs text-slate-400">Every session is a step forward.</p></div></div></section>
-    <div className="mt-7"><GooglePlayComingSoon /></div>
-  </>
+
+  function handleModeSelect(mode) {
+    setSettings((previous) => ({ ...previous, mode }))
+  }
+
+  function startTraining() {
+    navigate(`/practice?${new URLSearchParams(settings)}`)
+  }
+
+  return (
+    <>
+      <div className="mb-7 flex items-end justify-between">
+        <div>
+          <p className="eyebrow mb-2">YOUR DAILY DOSE OF PROGRESS</p>
+          <h1 className="text-2xl font-bold tracking-tight">
+            A good day to get better<span className="text-violet-500">.</span>
+          </h1>
+        </div>
+        <span className="hidden items-center gap-2 text-xs text-slate-400 sm:flex">
+          <span className="h-2 w-2 rounded-full bg-emerald-400" />
+          Your own pace. Your own progress.
+        </span>
+      </div>
+      <HomeHero />
+      <div className="grid items-start gap-7 lg:grid-cols-[1.5fr_1fr] xl:grid-cols-[1.65fr_1fr]">
+        <div>
+          <PracticeModePicker selectedMode={settings.mode} onSelect={handleModeSelect} />
+          <Link
+            to="/games"
+            className="mt-5 flex items-center gap-4 rounded-2xl border border-amber-200/60 bg-[#fff7e2] p-5 transition hover:bg-amber-100"
+          >
+            <span className="rounded-xl bg-[#ffedbc] p-3 text-[#b78929]">
+              <Icon name="game" className="h-6 w-6" />
+            </span>
+            <div>
+              <h3 className="mb-1 font-bold">A little challenge?</h3>
+              <p className="text-xs text-[#9b8b65]">
+                Beat the clock, build a combo, beat your best.
+              </p>
+            </div>
+            <Icon name="arrow" className="ml-auto h-5 w-5 text-[#b78929]" />
+          </Link>
+        </div>
+        <ChallengeSettings
+          settings={settings}
+          onChange={setSettings}
+          onStart={startTraining}
+        />
+      </div>
+      <PracticeSummary history={history} />
+      <div className="mt-7">
+        <GooglePlayComingSoon />
+      </div>
+    </>
+  )
 }

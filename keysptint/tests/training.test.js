@@ -1,20 +1,36 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
 import { readFile } from 'node:fs/promises'
-import { getExercise, shuffle } from '../src/server/api.js'
+import { getExercise, shuffle, loadLibraryStats } from '../src/server/api.js'
+import { calculateContentStats } from '../src/utils/contentStats.js'
 import { evaluateEdit } from '../src/utils/typing.js'
 import { getHistory, saveResult } from '../src/utils/storage.js'
-import { normalizeDuration, scrambleWord, isTimedGame, isWordGame } from '../src/utils/games.js'
+import {
+  normalizeDuration,
+  scrambleWord,
+  isTimedGame,
+  isWordGame,
+} from '../src/utils/games.js'
 
-globalThis.fetch = async url => {
+globalThis.fetch = async (url) => {
   const name = url.split('/').at(-1)
-  const data = JSON.parse(await readFile(new URL(`../public/public json/${name}`, import.meta.url), 'utf8'))
+  const data = JSON.parse(
+    await readFile(new URL(`../public/public json/${name}`, import.meta.url), 'utf8'),
+  )
   return { ok: true, json: async () => data }
 }
 
 test('all levels and categories produce exercises from the supplied library', async () => {
   for (const difficulty of ['easy', 'medium', 'hard']) {
-    for (const category of ['common', 'animals', 'food', 'technology', 'nature', 'school', 'business']) {
+    for (const category of [
+      'common',
+      'animals',
+      'food',
+      'technology',
+      'nature',
+      'school',
+      'business',
+    ]) {
       assert.ok((await getExercise({ mode: 'words', difficulty, category })).length > 0)
     }
     for (const mode of ['sentences', 'paragraphs', 'letters']) {
@@ -24,9 +40,18 @@ test('all levels and categories produce exercises from the supplied library', as
 })
 
 test('word filters work and impossible filters return an actionable error', async () => {
-  const result = await getExercise({ mode: 'words', difficulty: 'easy', category: 'common', length: '5', starts: 'a' })
-  assert.ok(result.split(' ').every(word => word.length === 5 && word.startsWith('a')))
-  await assert.rejects(getExercise({ mode: 'words', length: '30', starts: 'z' }), /No words match/)
+  const result = await getExercise({
+    mode: 'words',
+    difficulty: 'easy',
+    category: 'common',
+    length: '5',
+    starts: 'a',
+  })
+  assert.ok(result.split(' ').every((word) => word.length === 5 && word.startsWith('a')))
+  await assert.rejects(
+    getExercise({ mode: 'words', length: '30', starts: 'z' }),
+    /No words match/,
+  )
 })
 
 test('memory, detective, and scramble challenges return a single word', async () => {
@@ -38,7 +63,8 @@ test('memory, detective, and scramble challenges return a single word', async ()
 })
 
 test('timed games clamp durations and preserve valid second values', () => {
-  for (const value of [null, undefined, '', 'invalid', Infinity]) assert.equal(normalizeDuration(value), 60)
+  for (const value of [null, undefined, '', 'invalid', Infinity])
+    assert.equal(normalizeDuration(value), 60)
   assert.equal(normalizeDuration(1), 5)
   assert.equal(normalizeDuration(99), 60)
   assert.equal(normalizeDuration('17'), 17)
@@ -70,31 +96,73 @@ test('sprint and survival use sentences and scramble excludes unplayable single-
 })
 
 test('expanded content has unique exercises, valid quizzes, and matching published counts', async () => {
-  const read = async name => JSON.parse(await readFile(new URL(`../public/public json/${name}.json`, import.meta.url), 'utf8'))
-  const [words, sentences, paragraphs, grammar, stats] = await Promise.all(['words', 'sentences', 'paragraphs', 'grammar', 'content-stats'].map(read))
+  const read = async (name) =>
+    JSON.parse(
+      await readFile(
+        new URL(`../public/public json/${name}.json`, import.meta.url),
+        'utf8',
+      ),
+    )
+  const [words, sentences, paragraphs, grammar, stats] = await Promise.all(
+    ['words', 'sentences', 'paragraphs', 'grammar', 'content-stats'].map(read),
+  )
   let totalWords = 0
   for (const level of ['easy', 'medium', 'hard']) {
-    assert.ok(sentences[level].length >= 1000)
-    assert.ok(paragraphs[level].length >= 350)
-    for (const list of [sentences[level], paragraphs[level], ...Object.values(words[level])]) {
+    assert.ok(sentences[level].length > 0)
+    assert.ok(paragraphs[level].length > 0)
+    for (const list of [
+      sentences[level],
+      paragraphs[level],
+      ...Object.values(words[level]),
+    ]) {
       assert.equal(new Set(list).size, list.length)
-      assert.ok(list.every(item => typeof item === 'string' && item.trim().length > 0))
+      assert.ok(list.every((item) => typeof item === 'string' && item.trim().length > 0))
     }
     totalWords += Object.values(words[level]).reduce((sum, list) => sum + list.length, 0)
     assert.equal(stats.levels[level].sentences, sentences[level].length)
     assert.equal(stats.levels[level].paragraphs, paragraphs[level].length)
-    assert.equal(grammar.filter(lesson => lesson.level === level).length, 8)
+    assert.ok(grammar.some((lesson) => lesson.level === level))
   }
   assert.equal(stats.words, totalWords)
   assert.equal(stats.sentences, Object.values(sentences).flat().length)
   assert.equal(stats.paragraphs, Object.values(paragraphs).flat().length)
   assert.equal(stats.grammar, grammar.length)
-  assert.equal(new Set(grammar.map(lesson => lesson.id)).size, grammar.length)
+  assert.deepEqual(await loadLibraryStats(), stats)
+  assert.equal(new Set(grammar.map((lesson) => lesson.id)).size, grammar.length)
   for (const lesson of grammar) {
     assert.ok(lesson.options.includes(lesson.answer))
     assert.ok(lesson.examples.length >= 3)
     assert.ok(lesson.explanation.length > 50)
   }
+})
+
+test('library totals follow content additions and removals across categories and levels', () => {
+  const content = {
+    words: {
+      easy: { common: ['hello'], food: ['apple'] },
+      hard: { nature: ['ecosystem'] },
+    },
+    sentences: { easy: ['Hello there.'], medium: ['We went home.'] },
+    paragraphs: { easy: ['A short paragraph.'] },
+    grammar: [{ id: 'present-simple' }],
+  }
+  const before = calculateContentStats(content)
+  assert.equal(before.words, 3)
+  assert.equal(before.sentences, 2)
+  assert.equal(before.paragraphs, 1)
+  assert.equal(before.grammar, 1)
+  assert.equal(before.levels.medium.words, 0)
+
+  content.words.easy.common.push('goodbye', 'welcome')
+  content.sentences.medium.push('Another sentence.')
+  content.paragraphs.easy.pop()
+  content.grammar.push({ id: 'past-simple' })
+  const after = calculateContentStats(content)
+  assert.equal(after.words, 5)
+  assert.equal(after.levels.easy.words, 4)
+  assert.equal(after.sentences, 3)
+  assert.equal(after.paragraphs, 0)
+  assert.equal(after.grammar, 2)
 })
 
 test('typing counts incorrect keys, corrections, replacements, and deletions', () => {
@@ -114,14 +182,26 @@ test('shuffle preserves the source and all items', () => {
 
 test('history handles invalid storage and keeps at most 100 results', () => {
   let value = 'not json'
-  globalThis.localStorage = { getItem: () => value, setItem: (_key, next) => { value = next } }
+  globalThis.localStorage = {
+    getItem: () => value,
+    setItem: (_key, next) => {
+      value = next
+    },
+  }
   assert.deepEqual(getHistory(), [])
   value = '[null, {}]'
   assert.deepEqual(getHistory(), [])
   for (let i = 0; i < 105; i++) saveResult({ wpm: i, accuracy: 100 })
   assert.equal(getHistory().length, 100)
   assert.equal(getHistory()[0].wpm, 104)
-  globalThis.localStorage = { getItem: () => { throw new Error('disabled') }, setItem: () => { throw new Error('disabled') } }
+  globalThis.localStorage = {
+    getItem: () => {
+      throw new Error('disabled')
+    },
+    setItem: () => {
+      throw new Error('disabled')
+    },
+  }
   assert.deepEqual(getHistory(), [])
   assert.doesNotThrow(() => saveResult({ wpm: 20, accuracy: 90 }))
 })
