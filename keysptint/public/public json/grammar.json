@@ -1,0 +1,458 @@
+[
+  {
+    "id": "present-simple",
+    "title": "Present simple",
+    "level": "easy",
+    "description": "Talk about habits, facts, and things you do regularly.",
+    "explanation": "Use the base verb with I, you, we, and they. Add -s or -es with he, she, and it. Use do not or does not for negatives.",
+    "examples": [
+      "I read a book every evening.",
+      "She walks to school.",
+      "They do not drink coffee."
+    ],
+    "question": "She ___ English every day.",
+    "options": [
+      "study",
+      "studies",
+      "studying"
+    ],
+    "answer": "studies"
+  },
+  {
+    "id": "be",
+    "title": "The verb to be",
+    "level": "easy",
+    "description": "Introduce yourself and describe people, places, and feelings.",
+    "explanation": "Use am with I, is with he, she, and it, and are with you, we, and they. Put not after the verb to make a negative.",
+    "examples": [
+      "I am a student.",
+      "The library is quiet.",
+      "We are not tired."
+    ],
+    "question": "They ___ ready for the lesson.",
+    "options": [
+      "am",
+      "is",
+      "are"
+    ],
+    "answer": "are"
+  },
+  {
+    "id": "articles",
+    "title": "A, an, and the",
+    "level": "easy",
+    "description": "Choose the right article for the noun.",
+    "explanation": "Use a before a consonant sound and an before a vowel sound for one nonspecific thing. Use the when your listener knows which thing you mean. Sound matters: a university, an hour.",
+    "examples": [
+      "I have a book.",
+      "She eats an apple.",
+      "Please close the door."
+    ],
+    "question": "He is eating ___ orange.",
+    "options": [
+      "a",
+      "an",
+      "the a"
+    ],
+    "answer": "an"
+  },
+  {
+    "id": "present-continuous",
+    "title": "Present continuous",
+    "level": "easy",
+    "description": "Describe things happening right now.",
+    "explanation": "Use am, is, or are followed by a verb ending in -ing. This tense often describes an action happening now or a temporary situation.",
+    "examples": [
+      "I am learning English.",
+      "She is making dinner.",
+      "They are playing outside."
+    ],
+    "question": "We ___ watching a film right now.",
+    "options": [
+      "is",
+      "are",
+      "am"
+    ],
+    "answer": "are"
+  },
+  {
+    "id": "past-simple",
+    "title": "Past simple",
+    "level": "medium",
+    "description": "Tell a story about something that already happened.",
+    "explanation": "Add -ed to regular verbs. Irregular verbs have their own past forms, such as go → went. Use did not plus the base verb for negatives.",
+    "examples": [
+      "We visited the museum yesterday.",
+      "She went to the park.",
+      "I did not see the message."
+    ],
+    "question": "Yesterday, I ___ a new book.",
+    "options": [
+      "buy",
+      "bought",
+      "buying"
+    ],
+    "answer": "bought"
+  },
+  {
+    "id": "comparatives",
+    "title": "Comparatives and superlatives",
+    "level": "medium",
+    "description": "Compare two things or find the one that stands out.",
+    "explanation": "For many short adjectives, add -er to compare and -est for the superlative. For longer adjectives, use more and most. Some forms are irregular: good → better → best.",
+    "examples": [
+      "This room is quieter than the hall.",
+      "It is the most interesting book here.",
+      "Practice makes you better."
+    ],
+    "question": "This exercise is ___ than the last one.",
+    "options": [
+      "easy",
+      "easier",
+      "easiest"
+    ],
+    "answer": "easier"
+  },
+  {
+    "id": "present-perfect",
+    "title": "Present perfect",
+    "level": "medium",
+    "description": "Connect a past experience to the present.",
+    "explanation": "Use have or has followed by the past participle. Use it for experiences without a finished past time, recent events, or situations continuing until now.",
+    "examples": [
+      "I have finished my homework.",
+      "She has visited London twice.",
+      "We have lived here for three years."
+    ],
+    "question": "He ___ already finished the lesson.",
+    "options": [
+      "have",
+      "has",
+      "is"
+    ],
+    "answer": "has"
+  },
+  {
+    "id": "conditionals",
+    "title": "First and second conditionals",
+    "level": "hard",
+    "description": "Explore real possibilities and imaginary situations.",
+    "explanation": "For a real future possibility, use if + present simple, then will + base verb. For an imaginary present or future situation, use if + past simple, then would + base verb.",
+    "examples": [
+      "If I practice, I will improve.",
+      "If it rains, we will stay inside.",
+      "If I had more time, I would read more."
+    ],
+    "question": "If I had a bicycle, I ___ ride to school.",
+    "options": [
+      "will",
+      "would",
+      "am"
+    ],
+    "answer": "would"
+  },
+  {
+    "id": "passive",
+    "title": "The passive voice",
+    "level": "hard",
+    "description": "Focus on what happens rather than who does it.",
+    "explanation": "Use the correct form of be followed by the past participle. Add by to mention who performs the action when that information matters.",
+    "examples": [
+      "The letters are delivered every morning.",
+      "This book was written in 1998.",
+      "The report will be finished tomorrow."
+    ],
+    "question": "The window ___ broken yesterday.",
+    "options": [
+      "is",
+      "was",
+      "were"
+    ],
+    "answer": "was"
+  },
+  {
+    "id": "subject-pronouns",
+    "title": "Subject pronouns",
+    "level": "easy",
+    "description": "Replace names with I, you, he, she, it, we, and they.",
+    "explanation": "A subject pronoun tells us who or what performs an action. Use it for a single thing and they for more than one person or thing.",
+    "examples": [
+      "Maya is kind. She helps her friends.",
+      "The books are new. They are on the shelf.",
+      "My brother and I are ready. We can start."
+    ],
+    "question": "The children are outside. ___ are playing.",
+    "options": [
+      "It",
+      "They",
+      "He"
+    ],
+    "answer": "They"
+  },
+  {
+    "id": "possessives",
+    "title": "My, your, his, and her",
+    "level": "easy",
+    "description": "Explain who something belongs to.",
+    "explanation": "Put a possessive adjective before a noun: my book, your desk, his bag, her bike, its color, our home, their school. Do not add an apostrophe to its when it shows possession.",
+    "examples": [
+      "This is my notebook.",
+      "They put their coats near the door.",
+      "The bird opens its wings."
+    ],
+    "question": "We live here. This is ___ home.",
+    "options": [
+      "our",
+      "their",
+      "his"
+    ],
+    "answer": "our"
+  },
+  {
+    "id": "place-prepositions",
+    "title": "In, on, and under",
+    "level": "easy",
+    "description": "Describe where people and things are.",
+    "explanation": "Use in for something inside a space, on for something touching a surface, and under for something below another object. Next to means beside.",
+    "examples": [
+      "The keys are in my bag.",
+      "The book is on the table.",
+      "The cat is under the chair."
+    ],
+    "question": "The picture hangs ___ the wall.",
+    "options": [
+      "in",
+      "on",
+      "under"
+    ],
+    "answer": "on"
+  },
+  {
+    "id": "plurals",
+    "title": "One book, two books",
+    "level": "easy",
+    "description": "Talk about more than one thing.",
+    "explanation": "Most plural nouns add -s. Many nouns ending in -s, -sh, -ch, or -x add -es. Some plurals are irregular: child becomes children and person becomes people.",
+    "examples": [
+      "There are two buses at the station.",
+      "The children are reading.",
+      "I have three books in my bag."
+    ],
+    "question": "There are four ___ in the classroom.",
+    "options": [
+      "child",
+      "children",
+      "childs"
+    ],
+    "answer": "children"
+  },
+  {
+    "id": "future-plans",
+    "title": "Going to and will",
+    "level": "medium",
+    "description": "Describe plans, predictions, and quick decisions.",
+    "explanation": "Use be going to plus a base verb for an intention or a prediction based on present evidence. Will plus a base verb often expresses a prediction, promise, or decision made as you speak.",
+    "examples": [
+      "We are going to visit the museum.",
+      "I will help you with that box.",
+      "Look at the clouds. It is going to rain."
+    ],
+    "question": "I promise I ___ call you tonight.",
+    "options": [
+      "will",
+      "am",
+      "was"
+    ],
+    "answer": "will"
+  },
+  {
+    "id": "past-continuous",
+    "title": "Past continuous",
+    "level": "medium",
+    "description": "Describe an action in progress at a past moment.",
+    "explanation": "Use was or were followed by a verb ending in -ing. Combine it with the past simple when a shorter action interrupts an activity already in progress.",
+    "examples": [
+      "I was reading when the phone rang.",
+      "They were walking home at six.",
+      "She was cooking while he was studying."
+    ],
+    "question": "We ___ waiting when the bus arrived.",
+    "options": [
+      "was",
+      "were",
+      "is"
+    ],
+    "answer": "were"
+  },
+  {
+    "id": "countable-nouns",
+    "title": "Much, many, and some",
+    "level": "medium",
+    "description": "Choose quantity words for countable and uncountable nouns.",
+    "explanation": "Use many with plural countable nouns and much with uncountable nouns, especially in questions and negatives. Some and a lot of can be used with both types.",
+    "examples": [
+      "How many books do you have?",
+      "There is not much milk left.",
+      "We need some rice and some apples."
+    ],
+    "question": "How ___ water do we need?",
+    "options": [
+      "many",
+      "much",
+      "a few"
+    ],
+    "answer": "much"
+  },
+  {
+    "id": "advice-modals",
+    "title": "Should, must, and have to",
+    "level": "medium",
+    "description": "Give advice and explain obligations.",
+    "explanation": "Should gives advice. Must and have to express strong obligations. Must not means something is forbidden; do not have to means it is not necessary. Use the base verb after should and must.",
+    "examples": [
+      "You should review your notes.",
+      "We have to arrive before nine.",
+      "You must not park here."
+    ],
+    "question": "You ___ not have to bring food; lunch is provided.",
+    "options": [
+      "do",
+      "must",
+      "should"
+    ],
+    "answer": "do"
+  },
+  {
+    "id": "frequency",
+    "title": "Adverbs of frequency",
+    "level": "medium",
+    "description": "Say how often something happens.",
+    "explanation": "Adverbs such as always, usually, often, sometimes, and never usually come before the main verb but after be. Some adverbs, including sometimes, can also begin a sentence.",
+    "examples": [
+      "I usually read before bed.",
+      "She is always on time.",
+      "Sometimes we walk to school."
+    ],
+    "question": "Choose the natural position: She ___ drinks tea in the morning.",
+    "options": [
+      "usually",
+      "is usually",
+      "usually is"
+    ],
+    "answer": "usually"
+  },
+  {
+    "id": "relative-clauses",
+    "title": "Relative clauses",
+    "level": "hard",
+    "description": "Add information about a person, thing, or place.",
+    "explanation": "Use who for people, which for things, and where for places. That can replace who or which in many defining clauses. Non-defining clauses add extra information and use commas; they do not use that.",
+    "examples": [
+      "The woman who lives next door is a teacher.",
+      "This is the cafe where we met.",
+      "My bicycle, which is quite old, still works well."
+    ],
+    "question": "My sister, ___ lives abroad, is visiting next week.",
+    "options": [
+      "that",
+      "who",
+      "where"
+    ],
+    "answer": "who"
+  },
+  {
+    "id": "third-conditional",
+    "title": "The third conditional",
+    "level": "hard",
+    "description": "Imagine a different result in the past.",
+    "explanation": "Use if plus had and the past participle, followed by would have and the past participle. This describes an unreal past situation and its imagined consequence.",
+    "examples": [
+      "If I had left earlier, I would have caught the bus.",
+      "She would have helped if she had known.",
+      "If we had checked the map, we would not have got lost."
+    ],
+    "question": "If he had studied, he ___ have passed.",
+    "options": [
+      "will",
+      "would",
+      "has"
+    ],
+    "answer": "would"
+  },
+  {
+    "id": "reported-speech",
+    "title": "Reported speech",
+    "level": "hard",
+    "description": "Tell someone what another person said.",
+    "explanation": "After a past reporting verb, the tense often moves back: am becomes was, and will becomes would. Pronouns and time expressions may change with the context. A tense change is not always necessary when something is still true.",
+    "examples": [
+      "She said that she was tired.",
+      "He told me he would call the next day.",
+      "They said they had finished the work."
+    ],
+    "question": "He said, \"I am ready.\" He said that he ___ ready.",
+    "options": [
+      "was",
+      "were",
+      "be"
+    ],
+    "answer": "was"
+  },
+  {
+    "id": "gerunds-infinitives",
+    "title": "Gerunds and infinitives",
+    "level": "hard",
+    "description": "Choose -ing or to plus a verb after another verb.",
+    "explanation": "Some verbs take -ing, such as enjoy and avoid. Others take to plus a base verb, such as decide and hope. Certain verbs take both forms with a change of meaning, so learn useful combinations in context.",
+    "examples": [
+      "I enjoy reading short stories.",
+      "We decided to leave early.",
+      "She avoids checking her phone during lessons."
+    ],
+    "question": "They decided ___ the earlier train.",
+    "options": [
+      "taking",
+      "to take",
+      "take"
+    ],
+    "answer": "to take"
+  },
+  {
+    "id": "past-perfect",
+    "title": "Past perfect",
+    "level": "hard",
+    "description": "Show that one past event happened before another.",
+    "explanation": "Use had plus the past participle to make the earlier past event clear. The later event often uses the past simple. When the order is already obvious, the past perfect may be unnecessary.",
+    "examples": [
+      "The train had left before we arrived.",
+      "I recognized the street because I had been there before.",
+      "She had saved the file before the power went off."
+    ],
+    "question": "By the time I arrived, the meeting ___ started.",
+    "options": [
+      "has",
+      "had",
+      "was"
+    ],
+    "answer": "had"
+  },
+  {
+    "id": "contrast-linkers",
+    "title": "Although, despite, and however",
+    "level": "hard",
+    "description": "Connect contrasting ideas clearly.",
+    "explanation": "Although is followed by a clause with a subject and verb. Despite is followed by a noun or an -ing form. However connects contrasting statements and needs appropriate punctuation.",
+    "examples": [
+      "Although it was raining, we went out.",
+      "Despite the rain, we enjoyed the walk.",
+      "It was raining. However, we continued."
+    ],
+    "question": "___ being tired, she finished her work.",
+    "options": [
+      "Although",
+      "Despite",
+      "However"
+    ],
+    "answer": "Despite"
+  }
+]

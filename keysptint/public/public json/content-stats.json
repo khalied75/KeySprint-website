@@ -1,0 +1,23 @@
+{
+  "grammar": 24,
+  "words": 2480,
+  "sentences": 3276,
+  "paragraphs": 1104,
+  "levels": {
+    "easy": {
+      "words": 925,
+      "sentences": 1092,
+      "paragraphs": 368
+    },
+    "medium": {
+      "words": 854,
+      "sentences": 1092,
+      "paragraphs": 368
+    },
+    "hard": {
+      "words": 701,
+      "sentences": 1092,
+      "paragraphs": 368
+    }
+  }
+}
