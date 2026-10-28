@@ -2,6 +2,8 @@ import { Link } from 'react-router'
 import { useSettings } from '../context/SettingsContext'
 import { keyboardAudioSupported, playMechanicalKey } from '../utils/keyboardAudio'
 import Icon from '../components/Icon'
+import useMediaQuery from '../hooks/useMediaQuery'
+import { KEYBOARD_SCREEN_QUERY } from '../data/keyboardLayout'
 
 function Toggle({ checked, onChange, label, describedBy }) {
   return (
@@ -42,6 +44,7 @@ function SettingRow({ icon, title, descriptionId, checked, onChange, children })
 export default function Settings() {
   const { settings, updateSettings } = useSettings()
   const audioSupported = keyboardAudioSupported()
+  const supportsKeyboard = useMediaQuery(KEYBOARD_SCREEN_QUERY)
   return (
     <div className="mx-auto max-w-3xl">
       <Link
@@ -109,23 +112,25 @@ export default function Settings() {
             </p>
           )}
         </SettingRow>
-        <SettingRow
-          icon="keyboard"
-          title="Show desktop keyboard"
-          descriptionId="keyboard-description"
-          checked={settings.showKeyboard}
-          onChange={(enabled) => updateSettings({ showKeyboard: enabled })}
-        >
-          <p id="keyboard-description" className="text-sm leading-6 text-slate-400">
-            Show the visual keyboard below the typing field on desktop. Keys light up as
-            you press them. It stays hidden on mobile.
-          </p>
-          <p className="mt-3 text-xs font-semibold text-violet-500" aria-live="polite">
-            {settings.showKeyboard
-              ? 'Desktop keyboard is enabled'
-              : 'Desktop keyboard is hidden'}
-          </p>
-        </SettingRow>
+        {supportsKeyboard && (
+          <SettingRow
+            icon="keyboard"
+            title="Show visual keyboard"
+            descriptionId="keyboard-description"
+            checked={settings.showKeyboard}
+            onChange={(enabled) => updateSettings({ showKeyboard: enabled })}
+          >
+            <p id="keyboard-description" className="text-sm leading-6 text-slate-400">
+              Show the visual keyboard below the typing field on desktop and tablet. Keys
+              light up as you press them. This option is hidden on phone screens.
+            </p>
+            <p className="mt-3 text-xs font-semibold text-violet-500" aria-live="polite">
+              {settings.showKeyboard
+                ? 'Visual keyboard is enabled'
+                : 'Visual keyboard is hidden'}
+            </p>
+          </SettingRow>
+        )}
       </section>
       <p className="mt-5 text-center text-xs leading-6 text-slate-400">
         Your preferences are saved in this browser when storage is available.

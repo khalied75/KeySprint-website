@@ -1,9 +1,9 @@
-/* A visual guide for desktop keyboards; never competes with a mobile keyboard. */
+/* Match KEYBOARD_SCREEN_QUERY: desktop and tablet, without a mouse requirement. */
 .keyboard-visualizer {
   display: none;
 }
 
-@media (min-width: 1024px) and (hover: hover) and (pointer: fine) {
+@media (min-width: 768px) {
   .keyboard-visualizer {
     display: block;
     max-width: 800px;
@@ -81,5 +81,12 @@
     border-bottom-color: #5646b8;
     color: white;
     box-shadow: 0 0 14px #7464db55;
+  }
+}
+
+/* Leave space for the native keyboard in the compact touch practice workspace. */
+@media (pointer: coarse) {
+  .practice-layout[data-compact='true'] .keyboard-visualizer {
+    display: none;
   }
 }

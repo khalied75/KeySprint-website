@@ -2,9 +2,13 @@ import Icon from '../Icon'
 import { useSettings } from '../../context/SettingsContext'
 import usePressedKeys from '../../hooks/usePressedKeys'
 import KeyboardVisualizer from './KeyboardVisualizer'
+import useMediaQuery from '../../hooks/useMediaQuery'
+import { KEYBOARD_SCREEN_QUERY } from '../../data/keyboardLayout'
 
 export default function TypingInput({ settings, session, field }) {
   const { settings: preferences, playKey } = useSettings()
+  const supportsKeyboard = useMediaQuery(KEYBOARD_SCREEN_QUERY)
+  const showKeyboard = preferences.showKeyboard && supportsKeyboard
   const { pressedKeys, pressKey, clearKeys } = usePressedKeys()
   const { input, status, guessing, revealed } = session
   const inputLocked = status === 'loading' || (settings.game === 'recall' && revealed)
@@ -22,7 +26,7 @@ export default function TypingInput({ settings, session, field }) {
   }
 
   function handleKeyDown(event) {
-    if (preferences.showKeyboard) pressKey(event)
+    if (showKeyboard) pressKey(event)
     if (event.key === 'Enter' && guessing && input.trim()) playKey('enter')
   }
 
@@ -70,7 +74,7 @@ export default function TypingInput({ settings, session, field }) {
           </button>
         )}
       </div>
-      {preferences.showKeyboard && <KeyboardVisualizer pressedKeys={pressedKeys} />}
+      {showKeyboard && <KeyboardVisualizer pressedKeys={pressedKeys} />}
     </form>
   )
 }

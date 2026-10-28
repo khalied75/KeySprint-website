@@ -1,3 +1,6 @@
+// Keep this breakpoint aligned with styles/keyboard.css.
+export const KEYBOARD_SCREEN_QUERY = '(min-width: 768px)'
+
 const key = (code, label, shiftedLabel = label, width = 1) => ({
   code,
   label,
