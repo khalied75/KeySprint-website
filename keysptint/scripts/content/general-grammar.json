@@ -1,0 +1,194 @@
+[
+  {
+    "id": "have-got",
+    "title": "Have got and has got",
+    "level": "easy",
+    "description": "Talk about possessions, relationships, and personal features.",
+    "explanation": "Use have got with I, you, we, and they, and has got with he, she, and it. In questions, move have or has before the subject. Use have not got or has not got for negatives. This pattern usually describes a present state rather than a repeated action.",
+    "examples": [
+      "I have got a new schoolbag.",
+      "She has got two younger brothers.",
+      "Have you got a spare pencil?",
+      "Our house has not got a garage."
+    ],
+    "question": "My brother ___ got a red bicycle.",
+    "options": ["have", "has", "is"],
+    "answer": "has"
+  },
+  {
+    "id": "would-like",
+    "title": "Would like for polite requests",
+    "level": "easy",
+    "description": "Ask politely for something or say what you want to do.",
+    "explanation": "Use would like followed by a noun to request something, or followed by to and a base verb to describe a desired action. The short form is 'd like. Compare I like tea, which describes a general preference, with I would like some tea, which describes a wish or request now.",
+    "examples": [
+      "I would like a glass of water, please.",
+      "She would like to join our group.",
+      "Would you like to sit by the window?",
+      "We would like two tickets for the afternoon show."
+    ],
+    "question": "I would like ___ a table for two.",
+    "options": ["book", "to book", "booking"],
+    "answer": "to book"
+  },
+  {
+    "id": "lets-suggestions",
+    "title": "Suggestions with let's",
+    "level": "easy",
+    "description": "Suggest an activity for you and another person to do together.",
+    "explanation": "Let's means let us and is followed by the base form of a verb. Use let's not before the verb to suggest avoiding an action. It is different from lets without an apostrophe, which is a form of the verb let.",
+    "examples": [
+      "Let's take the path beside the river.",
+      "Let's check the answer together.",
+      "Let's not leave our bags in the doorway.",
+      "Let's ask the librarian for help."
+    ],
+    "question": "Let's ___ a short break.",
+    "options": ["take", "taking", "to take"],
+    "answer": "take"
+  },
+  {
+    "id": "was-were",
+    "title": "Was and were",
+    "level": "easy",
+    "description": "Describe people, places, and situations in the past.",
+    "explanation": "Use was with I, he, she, and it, and were with you, we, and they in ordinary past statements. Add not for a negative. Put was or were before the subject to ask a question. Do not add did to a simple question with was or were.",
+    "examples": [
+      "The library was closed yesterday.",
+      "We were at the sports center last night.",
+      "Was your journey comfortable?",
+      "They were not ready when the bus arrived."
+    ],
+    "question": "The children ___ happy with their new books.",
+    "options": ["was", "were", "be"],
+    "answer": "were"
+  },
+  {
+    "id": "present-perfect-or-past",
+    "title": "Present perfect or past simple?",
+    "level": "medium",
+    "description": "Choose between a completed past time and a connection to now.",
+    "explanation": "Use the past simple when you place an event in a finished past period, such as yesterday or last year. Use the present perfect for experiences without a specified finished time or situations connected to the present. Some time expressions, such as today, depend on whether the speaker sees the relevant period as finished.",
+    "examples": [
+      "I visited that museum last summer.",
+      "I have visited that museum several times.",
+      "She lost her keys yesterday but found them later.",
+      "She has lost her keys and cannot open the door."
+    ],
+    "question": "We ___ the exhibition yesterday.",
+    "options": ["have seen", "saw", "have been seeing"],
+    "answer": "saw"
+  },
+  {
+    "id": "since-for",
+    "title": "Since and for",
+    "level": "medium",
+    "description": "Distinguish a starting point from a length of time.",
+    "explanation": "Use since to identify when a situation began and for to describe its duration. Both often appear with perfect tenses for situations continuing to a reference time. For can also be used with other tenses, such as We stayed for two days.",
+    "examples": [
+      "We have lived in this neighborhood since March.",
+      "She has been waiting for half an hour.",
+      "I have known my best friend since primary school.",
+      "They worked at the same shop for five years."
+    ],
+    "question": "He has been studying here ___ three months.",
+    "options": ["since", "for", "at"],
+    "answer": "for"
+  },
+  {
+    "id": "both-either-neither",
+    "title": "Both, either, and neither",
+    "level": "medium",
+    "description": "Discuss two people, things, or choices.",
+    "explanation": "Both refers to two together. Either can mean one or the other of two choices, and neither means not one and not the other. Use both and, either or, and neither nor to join matching grammatical structures. Before a pronoun, use of: both of them.",
+    "examples": [
+      "Both routes lead to the town center.",
+      "You can use either entrance.",
+      "Neither answer explains the problem.",
+      "We can meet either on Tuesday or on Thursday."
+    ],
+    "question": "You may choose ___ tea or coffee.",
+    "options": ["either", "both", "neither"],
+    "answer": "either"
+  },
+  {
+    "id": "be-get-used-to",
+    "title": "Be used to and get used to",
+    "level": "medium",
+    "description": "Talk about being familiar with something or becoming familiar with it.",
+    "explanation": "Be used to means be accustomed to a situation. Get used to describes the process of becoming accustomed to it. In these expressions, to is a preposition, so it is followed by a noun, pronoun, or -ing form. This differs from used to plus a base verb for a past habit.",
+    "examples": [
+      "I am used to walking to work.",
+      "She is getting used to her new timetable.",
+      "We were not used to such cold mornings.",
+      "It took him a few days to get used to using the new keyboard."
+    ],
+    "question": "She is used to ___ early.",
+    "options": ["wake", "waking", "woke"],
+    "answer": "waking"
+  },
+  {
+    "id": "future-perfect-continuous",
+    "title": "Future perfect continuous",
+    "level": "hard",
+    "description": "Emphasize how long an activity will have continued by a future point.",
+    "explanation": "Use will have been followed by a verb ending in -ing. This form looks back from a future reference point and emphasizes the duration of an activity up to that point. Use the future perfect simple when the focus is on completion or a state verb that does not normally take a continuous form.",
+    "examples": [
+      "By June, I will have been learning English for a year.",
+      "By noon, they will have been traveling for six hours.",
+      "When the exhibition opens, she will have been preparing it for months.",
+      "By next winter, we will have been working together for a decade."
+    ],
+    "question": "By Friday, she will have been ___ on the project for a month.",
+    "options": ["work", "worked", "working"],
+    "answer": "working"
+  },
+  {
+    "id": "passive-with-modals",
+    "title": "Passive forms with modal verbs",
+    "level": "hard",
+    "description": "Express requirements, possibilities, and judgments without focusing on an agent.",
+    "explanation": "For a present or future passive, use a modal followed by be and a past participle: must be checked. For a past passive, use a modal followed by have been and a past participle: might have been delayed. The modal expresses the speaker's judgment or the type of obligation.",
+    "examples": [
+      "All applications must be submitted before Friday.",
+      "The meeting could be moved to a larger room.",
+      "The instructions should have been explained more clearly.",
+      "The parcel might have been delivered to the wrong address."
+    ],
+    "question": "The report must be ___ before publication.",
+    "options": ["check", "checking", "checked"],
+    "answer": "checked"
+  },
+  {
+    "id": "reduced-relative-clauses",
+    "title": "Reduced relative clauses",
+    "level": "hard",
+    "description": "Use participles to modify a noun more concisely.",
+    "explanation": "Some relative clauses with a subject relative pronoun can be reduced to participle phrases. An -ing form often has an active meaning, as in people waiting outside. A past participle often has a passive meaning, as in documents written in French. Reduction is not appropriate for every relative clause, so check that the meaning remains clear.",
+    "examples": [
+      "The students waiting outside are in my class.",
+      "The documents stored in this cupboard belong to the archive.",
+      "Anyone wishing to attend should contact the organizer.",
+      "The road leading to the village is closed for repairs."
+    ],
+    "question": "The letters ___ yesterday are on your desk.",
+    "options": ["delivered", "delivering", "deliver"],
+    "answer": "delivered"
+  },
+  {
+    "id": "mandative-subjunctive",
+    "title": "Formal recommendations with the subjunctive",
+    "level": "hard",
+    "description": "Use a base verb after formal demands and recommendations.",
+    "explanation": "In formal English, expressions such as recommend that, insist that, and it is essential that can be followed by a base-form subjunctive. The verb does not add -s for he or she, and be remains be. A should construction is also common, especially in British English. Keep this separate from reporting what someone claims to be true.",
+    "examples": [
+      "The committee recommended that the proposal be revised.",
+      "It is essential that every participant arrive on time.",
+      "She requested that the final copy be sent directly to her.",
+      "They insisted that he attend the meeting in person."
+    ],
+    "question": "Use the formal subjunctive: It is essential that she ___ informed immediately.",
+    "options": ["is", "be", "was"],
+    "answer": "be"
+  }
+]

@@ -1,10 +1,10 @@
 import Icon from './Icon'
 
-export default function GooglePlayComingSoon() {
+export default function GooglePlayDownload() {
   return (
     <section
       className="relative overflow-hidden rounded-[22px] border border-violet-200/70 bg-[#efedfc] p-6 md:p-8"
-      aria-label="KeySprint Android app coming soon"
+      aria-label="KeySprint is available on Google Play"
     >
       <div className="relative flex flex-wrap items-center gap-5">
         <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white text-violet-600 shadow-sm">
@@ -16,13 +16,16 @@ export default function GooglePlayComingSoon() {
           </p>
           <h2 className="text-xl font-bold md:text-2xl">Your rhythm, wherever you go.</h2>
           <p className="mt-2 max-w-xl text-sm leading-6 text-slate-500">
-            KeySprint for Android is coming soon to Google Play. Bring a little English
+            KeySprint for Android is now available on Google Play. Bring a little English
             practice into your everyday moments.
           </p>
         </div>
-        <div
-          className="flex items-center gap-3 rounded-xl bg-[#252b41] px-5 py-3 text-white"
-          role="status"
+        <a
+          href="https://play.google.com/store/apps/details?id=com.khaled.keysprint"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Get KeySprint on Google Play (opens in a new tab)"
+          className="flex items-center gap-3 rounded-xl bg-[#252b41] px-5 py-3 text-white transition hover:bg-[#343d59] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-violet-400"
         >
           <svg viewBox="0 0 28 32" className="h-8 w-7" aria-hidden="true">
             <path d="M2 2 17 16 2 30Z" fill="#65d5ee" />
@@ -32,11 +35,11 @@ export default function GooglePlayComingSoon() {
           </svg>
           <div>
             <p className="text-[9px] font-bold uppercase tracking-[.14em] text-violet-200">
-              Coming soon on
+              Get it on
             </p>
             <p className="text-xl font-semibold leading-7">Google Play</p>
           </div>
-        </div>
+        </a>
       </div>
     </section>
   )

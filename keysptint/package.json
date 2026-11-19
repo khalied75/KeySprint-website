@@ -6,6 +6,8 @@
   "scripts": {
     "content:stats": "node scripts/update-content-stats.mjs",
     "content:add-lessons": "node scripts/add-learning-content.mjs",
+    "content:expand-all": "node scripts/expand-general-content.mjs",
+    "content:expand-large": "node scripts/expand-large-library.mjs",
     "predev": "npm run content:stats",
     "prebuild": "npm run content:stats",
     "pretest": "npm run content:stats",

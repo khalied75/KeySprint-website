@@ -55,7 +55,7 @@ tests/training.test.js     Content, game, filter, typing, and storage checks
 - `/games`: timed sentence sprint, three-life sentence survival, Word rush, flash recall (3-second preview, 5 words), word detective (first/last letter and category clues, 5 words), and letter scramble. Sprint and scramble offer a 5–60 second slider; Word rush offers 10–60 seconds. Timers begin on the first keystroke.
 - `/learn`: grammar explanations, examples, quizzes, and a searchable vocabulary library with pagination. Sentence typing uses the general sentence library rather than lesson-specific exercises.
 - `/progress`: latest 100 completed or manually finished sessions, saved in localStorage on the current browser/device when available.
-- `/about`: practice overview, links to all six games, scoring details, privacy notes, and a Google Play coming-soon notice. The notice also appears on the homepage and does not link to an unreleased listing. Unknown routes show a recovery page.
+- `/about`: practice overview, links to all six games, scoring details, privacy notes, and a Google Play download card. The card also appears on the homepage and links to the released Android app at `https://play.google.com/store/apps/details?id=com.khaled.keysprint`. Unknown routes show a recovery page.
 - `/settings`: dark mode and mechanical keyboard sound switches. Preferences are saved locally. The initial theme follows the operating system unless a theme was saved. Keyboard sound defaults to off and uses locally synthesized Web Audio in the practice/game input, including mobile text input; no audio asset or microphone permission is required.
 
 ### Word rush
@@ -89,6 +89,10 @@ The footer links to `/privacy-policy`. Policy content and the privacy contact em
 `npm run build` outputs `dist/`. Configure your static host to rewrite unknown application paths to `/index.html` so React Router deep links work. For a subdirectory deployment, configure Vite's `base` and BrowserRouter's `basename` together. The default assumes deployment at the domain root.
 
 ## Code formatting and navigation
+
+The large practice bank is merged with `npm run content:expand-large`. It writes the expanded entries into the actual `public/public json/words.json`, `sentences.json`, `paragraphs.json`, and `grammar.json` files and recalculates `content-stats.json`. Word additions include explicitly selected countable nouns and their plural forms. Sentence drills practice affirmative, negative, and question structures across subjects and contexts. Paragraph variants combine compatible choices within a single authored scenario, rather than unrelated sentences. Existing entries and edited lessons are preserved, and repeated runs avoid duplicates. The editable source banks are `scripts/content/large-practice-bank.mjs`, `large-grammar.json`, and `large-stories-*.json`.
+
+Run `npm run content:expand-all` to merge the general vocabulary, paragraphs, sentences, and grammar in `scripts/content/general-*` into the current library. Existing lesson IDs and content entries are preserved, new entries are deduplicated, and statistics are refreshed. Complete sentences from the new passages and examples from the new grammar lessons also become sentence typing exercises. Repeating the command does not duplicate content.
 
 Additional grammar lessons and sentence exercises are authored in `scripts/content/grammar-lessons.json` and `scripts/content/sentence-exercises.json`. Run `npm run content:add-lessons` to merge these into the public library and refresh statistics. Existing lesson IDs keep their current content, and repeated runs do not duplicate lessons or sentences. The script leaves words and paragraphs unchanged. Each added grammar lesson includes four examples and a multiple-choice question; its examples are also added to sentence typing at the matching difficulty.
 

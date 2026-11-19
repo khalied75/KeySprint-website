@@ -45,7 +45,7 @@ export const privacySections = [
     paragraphs: [
       'The current KeySprint web application does not include advertising SDKs, analytics trackers, social login, or third-party word lookup services. Lesson content is served with the website.',
       'KeySprint does not sell your locally stored practice information or transmit it to advertisers through the current application. Ordinary hosting connections are described above.',
-      'The Google Play coming-soon notice is an announcement. It does not sign you up for a service or send your practice data to Google Play.',
+      'The Google Play download link opens the KeySprint Android app listing. The website does not attach your locally stored practice history or preferences to this link. Google Play handles your visit under its own privacy policies.',
     ],
   },
   {

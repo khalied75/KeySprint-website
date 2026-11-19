@@ -1,0 +1,578 @@
+[
+  {
+    "id": "common-contractions",
+    "title": "Common contractions",
+    "level": "easy",
+    "description": "Recognize shortened forms used in everyday English.",
+    "explanation": "A contraction combines words and uses an apostrophe for missing letters. For example, I am becomes I'm and do not becomes don't. Its shows possession, while it's means it is or it has. Contractions are common in conversation and informal writing.",
+    "examples": [
+      "I'm ready for the next lesson.",
+      "They don't live far from the station.",
+      "It's a good day for a walk.",
+      "We aren't late for the meeting."
+    ],
+    "question": "The contraction of she is is ___.",
+    "options": ["she's", "shes", "she're"],
+    "answer": "she's"
+  },
+  {
+    "id": "independent-possessive-pronouns",
+    "title": "Mine, yours, hers, and theirs",
+    "level": "easy",
+    "description": "Show ownership without repeating a noun.",
+    "explanation": "Possessive pronouns replace a possessive adjective and noun: my bag becomes mine. Use mine, yours, his, hers, ours, and theirs without a following noun. Do not add apostrophes to these pronouns. Compare This is her notebook with This notebook is hers.",
+    "examples": [
+      "This blue umbrella is mine.",
+      "Is that notebook yours?",
+      "The red bicycle is hers.",
+      "Our classroom is smaller than theirs."
+    ],
+    "question": "That is our table. The table is ___.",
+    "options": ["ours", "our", "us"],
+    "answer": "ours"
+  },
+  {
+    "id": "adverbs-of-manner",
+    "title": "Slowly, carefully, and well",
+    "level": "easy",
+    "description": "Describe how someone performs an action.",
+    "explanation": "An adverb of manner describes how an action happens. Many are formed by adding -ly to an adjective: careful becomes carefully. Some are irregular, such as good becoming well. An adverb can follow the verb or its object: She reads clearly; She reads the instructions carefully.",
+    "examples": [
+      "Please speak slowly so I can understand.",
+      "She writes the address carefully.",
+      "My brother plays the piano well.",
+      "The children waited quietly outside."
+    ],
+    "question": "He is a careful driver. He drives ___.",
+    "options": ["careful", "carefully", "care"],
+    "answer": "carefully"
+  },
+  {
+    "id": "present-simple-negatives",
+    "title": "Do not and does not",
+    "level": "easy",
+    "description": "Make negative statements about habits and facts.",
+    "explanation": "Use do not with I, you, we, and they, and does not with he, she, and it. The main verb stays in its base form after does not. Do not use this pattern with be: say She is not ready rather than She does not be ready.",
+    "examples": [
+      "I do not drink coffee in the evening.",
+      "She does not work on Saturdays.",
+      "They do not need another ticket.",
+      "This bus does not stop at the museum."
+    ],
+    "question": "My sister does not ___ meat.",
+    "options": ["eat", "eats", "eating"],
+    "answer": "eat"
+  },
+  {
+    "id": "past-simple-questions",
+    "title": "Past questions with did",
+    "level": "easy",
+    "description": "Ask about a completed past action.",
+    "explanation": "For past simple questions with most verbs, use did followed by the subject and the base verb. The past tense is carried by did, so do not use the past form again. Questions with past be use was or were instead: Were you at home?",
+    "examples": [
+      "Did you enjoy the school trip?",
+      "Where did they buy the tickets?",
+      "What time did the lesson finish?",
+      "Did your brother bring his camera?"
+    ],
+    "question": "Did she ___ the message?",
+    "options": ["received", "receive", "receiving"],
+    "answer": "receive"
+  },
+  {
+    "id": "past-simple-negatives",
+    "title": "Past negatives with did not",
+    "level": "easy",
+    "description": "Say that an action did not happen in the past.",
+    "explanation": "Use did not or didn't followed by the base form of the main verb. The same form works with all subjects. Do not add a second past-tense ending after did not. Use was not or were not when the main verb is be.",
+    "examples": [
+      "We did not visit the castle yesterday.",
+      "He did not find his gloves.",
+      "I didn't hear the announcement.",
+      "They did not take the earlier train."
+    ],
+    "question": "We did not ___ the film last night.",
+    "options": ["saw", "seen", "see"],
+    "answer": "see"
+  },
+  {
+    "id": "present-continuous-questions",
+    "title": "Questions about actions happening now",
+    "level": "easy",
+    "description": "Ask what someone is doing at the moment.",
+    "explanation": "Put am, is, or are before the subject, then use the -ing form of the main verb. A question word can come first: What are you reading? Do not add do or does to this question pattern.",
+    "examples": [
+      "Are you waiting for someone?",
+      "What is your sister drawing?",
+      "Why are they carrying those boxes?",
+      "Is the teacher writing on the board?"
+    ],
+    "question": "What ___ he doing now?",
+    "options": ["is", "does", "do"],
+    "answer": "is"
+  },
+  {
+    "id": "whose-questions",
+    "title": "Whose is it?",
+    "level": "easy",
+    "description": "Ask who owns something.",
+    "explanation": "Use whose to ask about possession. It can come before a noun, as in Whose coat is this?, or stand alone, as in Whose is this? Do not confuse whose with who's, which means who is or who has.",
+    "examples": [
+      "Whose jacket is on the chair?",
+      "Whose books are in this bag?",
+      "Whose is the green bicycle?",
+      "Do you know whose umbrella this is?"
+    ],
+    "question": "___ pencil is this? It belongs to Maya.",
+    "options": ["Who's", "Whose", "Who"],
+    "answer": "Whose"
+  },
+  {
+    "id": "how-often-how-long",
+    "title": "How often and how long",
+    "level": "easy",
+    "description": "Ask about frequency and duration.",
+    "explanation": "Use how often to ask about the frequency of an activity, such as twice a week. Use how long to ask about duration, such as twenty minutes. The verb form depends on the situation: How often do you visit? How long did you wait?",
+    "examples": [
+      "How often do you go to the library?",
+      "How long does the journey take?",
+      "How often does your class meet?",
+      "How long did you stay at the museum?"
+    ],
+    "question": "___ do you practice? Every day.",
+    "options": ["How often", "How long", "How far"],
+    "answer": "How often"
+  },
+  {
+    "id": "want-to-verb",
+    "title": "Want to do something",
+    "level": "easy",
+    "description": "Describe an action that someone wants to do.",
+    "explanation": "When another verb follows want, use to plus the base form: want to learn. The form of want changes with the subject or tense, but the following verb stays in the base form. Use a noun directly after want when you mean a thing rather than an action.",
+    "examples": [
+      "I want to learn a new song.",
+      "She wants to visit her cousins.",
+      "They wanted to catch the early bus.",
+      "Do you want to join our game?"
+    ],
+    "question": "He wants ___ English.",
+    "options": ["learning", "to learn", "learn"],
+    "answer": "to learn"
+  },
+  {
+    "id": "enjoy-and-like-activities",
+    "title": "Enjoy doing something",
+    "level": "easy",
+    "description": "Talk about activities you enjoy.",
+    "explanation": "After enjoy, use a noun or an -ing verb form, not to plus a verb. Like can be followed by either an -ing form or a to-infinitive in many contexts. Use the -ing form when practicing descriptions of enjoyable activities.",
+    "examples": [
+      "I enjoy reading travel stories.",
+      "She enjoys helping in the garden.",
+      "We like playing board games together.",
+      "They enjoy learning useful phrases."
+    ],
+    "question": "My brother enjoys ___ pictures.",
+    "options": ["draw", "to draw", "drawing"],
+    "answer": "drawing"
+  },
+  {
+    "id": "infinitive-of-purpose",
+    "title": "To explain a purpose",
+    "level": "easy",
+    "description": "Explain why you do something using to plus a verb.",
+    "explanation": "Use to plus the base form of a verb to explain the purpose of an action: I went to the shop to buy bread. The phrase answers the question Why? Do not add for before this to-infinitive.",
+    "examples": [
+      "I opened the window to let in fresh air.",
+      "We went to the station to buy tickets.",
+      "She called her friend to ask a question.",
+      "He brought a notebook to record new words."
+    ],
+    "question": "I went to the library ___ a book.",
+    "options": ["borrow", "to borrow", "for borrow"],
+    "answer": "to borrow"
+  },
+  {
+    "id": "future-time-clauses",
+    "title": "When and after for future events",
+    "level": "medium",
+    "description": "Use present forms in clauses referring to a future time.",
+    "explanation": "After time conjunctions such as when, after, before, and as soon as, use a present form for a future event rather than will. The main clause can use will. The present perfect may emphasize completion: I will call after I have finished.",
+    "examples": [
+      "I will call you when I arrive.",
+      "We will leave as soon as the rain stops.",
+      "She will check the room before the visitors arrive.",
+      "They will eat after they have finished the task."
+    ],
+    "question": "I will send a message when I ___.",
+    "options": ["arrive", "will arrive", "arrived"],
+    "answer": "arrive"
+  },
+  {
+    "id": "unless-conditions",
+    "title": "Conditions with unless",
+    "level": "medium",
+    "description": "Describe an exception to a result or decision.",
+    "explanation": "Unless often means if not: We will walk unless it rains means we will walk if it does not rain. Do not add an unnecessary negative after unless. In ordinary future conditions, use a present form in the unless-clause.",
+    "examples": [
+      "We will leave at nine unless the plan changes.",
+      "You cannot enter unless you have a ticket.",
+      "I will take the bus unless someone offers me a lift.",
+      "The shop will remain open unless the weather gets worse."
+    ],
+    "question": "We will go out unless it ___.",
+    "options": ["rains", "will rain", "raining"],
+    "answer": "rains"
+  },
+  {
+    "id": "in-case-preparation",
+    "title": "In case and if",
+    "level": "medium",
+    "description": "Distinguish preparation from a condition.",
+    "explanation": "Use in case to explain a precaution taken before a possible event. Use if to state a condition for an action. Compare Take a coat in case it gets cold with Put on your coat if you feel cold. The first prepares for a possibility; the second responds to a condition.",
+    "examples": [
+      "Take a map in case your phone stops working.",
+      "I wrote down the address in case I forgot it.",
+      "We will go inside if it starts to rain.",
+      "She packed an extra pen in case she needed one."
+    ],
+    "question": "Take some water as a precaution ___ the journey is longer than expected.",
+    "options": ["in case", "unless", "although"],
+    "answer": "in case"
+  },
+  {
+    "id": "ed-ing-adjectives",
+    "title": "Interested or interesting?",
+    "level": "medium",
+    "description": "Distinguish a feeling from what causes it.",
+    "explanation": "Many -ed adjectives describe how someone feels, while corresponding -ing adjectives describe the person or thing that causes the feeling. A person can be interesting if they cause interest. Choose according to meaning, not simply whether the noun is a person or a thing.",
+    "examples": [
+      "The instructions were confusing, so I felt confused.",
+      "She was interested in the visitor's story.",
+      "The long journey was tiring.",
+      "We were surprised by the result."
+    ],
+    "question": "The story held my attention. It was ___.",
+    "options": ["interested", "interesting", "interest"],
+    "answer": "interesting"
+  },
+  {
+    "id": "relative-whose",
+    "title": "Relative clauses with whose",
+    "level": "medium",
+    "description": "Connect a person or thing with something belonging to it.",
+    "explanation": "Use whose before a noun to express possession in a relative clause. It can refer to people and, in appropriate contexts, organizations or things. Do not replace whose with who's, and do not add another possessive adjective after it.",
+    "examples": [
+      "The student whose notebook was missing found it later.",
+      "I met an author whose stories I had read at school.",
+      "The building whose roof was damaged is being repaired.",
+      "She thanked the neighbor whose advice had helped her."
+    ],
+    "question": "That is the girl ___ bicycle was stolen.",
+    "options": ["who's", "whose", "who"],
+    "answer": "whose"
+  },
+  {
+    "id": "already-yet-just",
+    "title": "Already, yet, and just",
+    "level": "medium",
+    "description": "Describe completion, expectation, and recent events.",
+    "explanation": "Already often indicates that an event happened before now or sooner than expected. Yet is common at the end of questions and negatives about an expected event. Just can emphasize a very recent event. These words often appear with the present perfect, though usage varies by context and variety of English.",
+    "examples": [
+      "I have already packed my bag.",
+      "Have you checked the timetable yet?",
+      "She has not replied yet.",
+      "We have just finished the last exercise."
+    ],
+    "question": "Have you finished your homework ___?",
+    "options": ["yet", "since", "for"],
+    "answer": "yet"
+  },
+  {
+    "id": "two-object-verbs",
+    "title": "Give someone something",
+    "level": "medium",
+    "description": "Arrange direct and indirect objects clearly.",
+    "explanation": "Some verbs allow an indirect object before a direct object: give me the book. Another pattern uses to or for after the direct object: give the book to me, buy a gift for her. Not every verb allows both patterns; for example, say explain the rule to me rather than explain me the rule.",
+    "examples": [
+      "She gave her brother a useful book.",
+      "Please send the address to me.",
+      "We bought our teacher a small gift.",
+      "He explained the instructions to the visitors."
+    ],
+    "question": "Please explain the rule ___ me.",
+    "options": ["to", "at", "on"],
+    "answer": "to"
+  },
+  {
+    "id": "as-as-comparisons",
+    "title": "As clear as and not as difficult as",
+    "level": "medium",
+    "description": "Compare equal or unequal qualities.",
+    "explanation": "Use as plus an adjective or adverb plus as to describe equality. Use not as ... as when the first item has less of a quality. Keep the adjective in its ordinary form, not the comparative form. Use as much with uncountable quantities and as many with plural countable nouns.",
+    "examples": [
+      "This room is as bright as the one upstairs.",
+      "The second task was not as difficult as the first.",
+      "She speaks as clearly as her teacher.",
+      "We do not have as many chairs as we need."
+    ],
+    "question": "This path is not as ___ as the other one.",
+    "options": ["wide", "wider", "widest"],
+    "answer": "wide"
+  },
+  {
+    "id": "present-simple-passive",
+    "title": "Present simple passive",
+    "level": "medium",
+    "description": "Describe a regular process without focusing on its agent.",
+    "explanation": "Use am, is, or are plus a past participle for the present simple passive. The subject receives the action, so make be agree with that subject. Include by plus the agent only when identifying who performs the action is useful.",
+    "examples": [
+      "The rooms are cleaned every morning.",
+      "This bread is made at the local bakery.",
+      "Visitors are asked to leave their bags at the desk.",
+      "The main entrance is locked after six."
+    ],
+    "question": "The letters ___ delivered every afternoon.",
+    "options": ["is", "are", "be"],
+    "answer": "are"
+  },
+  {
+    "id": "reported-requests-commands",
+    "title": "Reporting requests and instructions",
+    "level": "medium",
+    "description": "Report what someone asked or told another person to do.",
+    "explanation": "Use ask or tell followed by an object and to plus a base verb to report many requests and instructions. For a negative instruction, use not to. Tell normally needs an object in this pattern; do not replace it with say without changing the structure.",
+    "examples": [
+      "She asked me to close the window.",
+      "The teacher told us to read the first paragraph.",
+      "He asked the visitors not to touch the display.",
+      "They told her to wait near the entrance."
+    ],
+    "question": "He told me ___ late.",
+    "options": ["not to be", "to not being", "not be"],
+    "answer": "not to be"
+  },
+  {
+    "id": "polite-could-would",
+    "title": "Polite requests with could and would",
+    "level": "medium",
+    "description": "Ask for help using natural request patterns.",
+    "explanation": "Could you plus a base verb is a common polite request. Would you mind is followed by an -ing form. A question with would you mind asks whether the action would be a problem, so a response such as Not at all can indicate agreement.",
+    "examples": [
+      "Could you check this address for me?",
+      "Would you mind opening the door?",
+      "Could you speak a little more slowly?",
+      "Would you mind waiting for a moment?"
+    ],
+    "question": "Would you mind ___ me the timetable?",
+    "options": ["show", "showing", "to show"],
+    "answer": "showing"
+  },
+  {
+    "id": "purpose-so-that",
+    "title": "Purpose clauses with so that",
+    "level": "medium",
+    "description": "Explain a purpose using a complete clause.",
+    "explanation": "Use so that followed by a subject and verb to explain the intended purpose of an action. Can and could are common in these clauses. Unlike a simple to-infinitive, a so that clause can make a different subject explicit.",
+    "examples": [
+      "I wrote the address clearly so that you could read it.",
+      "We moved the chairs so that everyone could see.",
+      "She speaks slowly so that beginners can follow.",
+      "They left a note so that the visitors would know where to wait."
+    ],
+    "question": "We opened the curtains so that we ___ see better.",
+    "options": ["could", "to", "for"],
+    "answer": "could"
+  },
+  {
+    "id": "future-in-the-past",
+    "title": "The future viewed from the past",
+    "level": "hard",
+    "description": "Describe expectations and plans from an earlier perspective.",
+    "explanation": "Use would plus a base verb or was/were going to plus a base verb to refer to a future event from a past point of view. The form describes the earlier expectation or intention and does not by itself guarantee that the event happened.",
+    "examples": [
+      "She thought the journey would take two hours.",
+      "We were going to meet outside the museum.",
+      "He promised that he would send a clearer copy.",
+      "They knew the decision would affect the next stage."
+    ],
+    "question": "She said the results ___ be ready the following day.",
+    "options": ["would", "had", "were"],
+    "answer": "would"
+  },
+  {
+    "id": "conditional-inversion",
+    "title": "Conditional inversion without if",
+    "level": "hard",
+    "description": "Use formal conditional patterns with had, were, and should.",
+    "explanation": "In formal conditional clauses, had, were, or should can move before the subject and replace if. Had I known means if I had known. Were we to agree means if we were to agree. Should you need help means if you should need help.",
+    "examples": [
+      "Had I known about the delay, I would have waited at home.",
+      "Were the circumstances different, we could consider another approach.",
+      "Should you require assistance, please contact reception.",
+      "Had they checked the map, they would have noticed the alternative route."
+    ],
+    "question": "___ I known, I would have helped.",
+    "options": ["Had", "Have", "Did"],
+    "answer": "Had"
+  },
+  {
+    "id": "modal-continuous-deductions",
+    "title": "Might be doing and must be doing",
+    "level": "hard",
+    "description": "Make deductions about actions currently in progress.",
+    "explanation": "Use a modal followed by be and an -ing form to describe an ongoing possibility or deduction. Might be working expresses uncertainty, while must be working expresses a strong deduction. Cannot be working expresses a strong negative deduction rather than a prohibition in this context.",
+    "examples": [
+      "She might be waiting at the other entrance.",
+      "They must be discussing the revised proposal.",
+      "He cannot be using the room because the building is closed.",
+      "The coordinator may be checking the final list."
+    ],
+    "question": "She might be ___ the earlier report.",
+    "options": ["read", "reading", "reads"],
+    "answer": "reading"
+  },
+  {
+    "id": "perfect-infinitives",
+    "title": "Perfect infinitives",
+    "level": "hard",
+    "description": "Refer to an earlier event after an infinitive marker.",
+    "explanation": "A perfect infinitive uses to have plus a past participle. It often places an event before the time of the main verb: She seems to have left. It also appears after expressions of regret, expectation, or reported belief. Interpret its timing in the context of the whole sentence.",
+    "examples": [
+      "She seems to have misunderstood the instruction.",
+      "The visitors appear to have taken a different route.",
+      "He was fortunate to have kept a spare copy.",
+      "They were pleased to have completed the review on time."
+    ],
+    "question": "He appears to have ___ the message.",
+    "options": ["receive", "received", "receiving"],
+    "answer": "received"
+  },
+  {
+    "id": "remember-doing-to-do",
+    "title": "Remember doing or remember to do?",
+    "level": "hard",
+    "description": "Choose a verb pattern that matches the intended time relationship.",
+    "explanation": "Remember doing refers to a memory of an action that happened. Remember to do refers to not forgetting a necessary action. Similar changes of meaning occur with some other verbs, so do not assume the two complements are interchangeable.",
+    "examples": [
+      "I remember meeting her at the workshop.",
+      "Please remember to lock the cupboard.",
+      "She remembered to bring the original documents.",
+      "He remembers seeing the sign beside the gate."
+    ],
+    "question": "I have a clear memory of it: I remember ___ the letter yesterday.",
+    "options": ["posting", "to post", "post"],
+    "answer": "posting"
+  },
+  {
+    "id": "stop-doing-to-do",
+    "title": "Stop doing or stop to do?",
+    "level": "hard",
+    "description": "Distinguish ending an activity from pausing for a purpose.",
+    "explanation": "Stop doing means discontinue the activity named by the -ing form. Stop to do means pause another activity in order to perform the action in the infinitive. Compare He stopped talking with He stopped to talk to a neighbor.",
+    "examples": [
+      "She stopped reading when the phone rang.",
+      "We stopped to ask someone for directions.",
+      "He stopped checking his messages during lessons.",
+      "They stopped to admire the view from the bridge."
+    ],
+    "question": "We paused our walk in order to take a photograph. We stopped ___ a photograph.",
+    "options": ["taking", "to take", "take"],
+    "answer": "to take"
+  },
+  {
+    "id": "concessive-however",
+    "title": "However difficult and no matter how",
+    "level": "hard",
+    "description": "Express a result that is not changed by a degree or circumstance.",
+    "explanation": "However plus an adjective or adverb can introduce a concessive clause: however difficult it is means no matter how difficult it is. This use differs from however meaning nevertheless. Maintain normal subject-before-verb order after the adjective or adverb.",
+    "examples": [
+      "However difficult the task is, we should explain it clearly.",
+      "No matter how carefully we plan, some uncertainty remains.",
+      "However useful the proposal seems, its assumptions need checking.",
+      "No matter where the meeting takes place, everyone needs clear directions."
+    ],
+    "question": "However ___ the task is, we will try.",
+    "options": ["difficult", "difficulty", "difficultly"],
+    "answer": "difficult"
+  },
+  {
+    "id": "fronted-time-place",
+    "title": "Fronting time and place information",
+    "level": "hard",
+    "description": "Change the focus of a sentence by moving information to the beginning.",
+    "explanation": "A time, place, or other adverbial phrase can be moved to the beginning to establish context. Ordinary fronting does not automatically require inversion: After the meeting, we reviewed the notes. Distinguish this from negative or restrictive fronting, which may require auxiliary inversion.",
+    "examples": [
+      "At the far end of the hall, the volunteers were preparing the display.",
+      "After a lengthy discussion, the committee reached a decision.",
+      "For the next stage, we will need a clearer timetable.",
+      "In the revised report, the limitations are explained first."
+    ],
+    "question": "After the meeting, ___ the notes.",
+    "options": ["we reviewed", "did we reviewed", "reviewed we"],
+    "answer": "we reviewed"
+  },
+  {
+    "id": "auxiliary-ellipsis",
+    "title": "Avoiding repetition with auxiliary verbs",
+    "level": "hard",
+    "description": "Leave out repeated verb phrases when the meaning is clear.",
+    "explanation": "An auxiliary can stand for a verb phrase already understood from context. Use the appropriate tense and auxiliary: She has finished, but I haven't. With an ordinary present or past simple verb, do, does, or did can replace the repeated verb phrase.",
+    "examples": [
+      "I thought the route was clear, but she did not.",
+      "He has checked the figures, and so have I.",
+      "They cannot attend, but we can.",
+      "She enjoyed the workshop more than I did."
+    ],
+    "question": "She finished the task before I ___.",
+    "options": ["did", "was", "have"],
+    "answer": "did"
+  },
+  {
+    "id": "nominal-relative-what",
+    "title": "What as a noun clause",
+    "level": "hard",
+    "description": "Use what to mean the thing or things that.",
+    "explanation": "A what-clause can function like a noun phrase as a subject, object, or complement. What includes the meaning of the thing that, so do not add a separate noun antecedent before it in this use. Compare I understood what she meant with I understood the explanation that she gave.",
+    "examples": [
+      "What she explained changed our understanding of the problem.",
+      "We recorded what the visitors found confusing.",
+      "The difficulty is what happens after the first stage.",
+      "I could not hear what the guide was saying."
+    ],
+    "question": "We wrote down ___ the teacher said.",
+    "options": ["what", "which it", "that what"],
+    "answer": "what"
+  },
+  {
+    "id": "zero-article-institutions",
+    "title": "School, prison, and the zero article",
+    "level": "hard",
+    "description": "Distinguish an institutional activity from a particular building.",
+    "explanation": "Some institutional nouns can appear without an article when referring to their usual purpose: go to school as a pupil, be in prison as a prisoner. The article often appears when referring to a particular building for another purpose. Usage differs with some nouns and varieties of English, such as hospital in British and American English.",
+    "examples": [
+      "The children go to school by bus.",
+      "Their father went to the school to meet the headteacher.",
+      "He was sent to prison after the trial.",
+      "She visited the prison to interview its staff."
+    ],
+    "question": "In the usual institutional meaning, the children go to ___ school every weekday.",
+    "options": ["no article", "an", "a"],
+    "answer": "no article"
+  },
+  {
+    "id": "passive-reporting-verbs",
+    "title": "Is said to and is believed to",
+    "level": "hard",
+    "description": "Report a belief or claim without identifying a specific speaker.",
+    "explanation": "A passive reporting structure can use it is said that plus a clause, or a subject followed by is said to plus an infinitive. Use a perfect infinitive for an earlier event: is believed to have arrived. These patterns report a claim or belief; they do not independently establish that it is true.",
+    "examples": [
+      "The building is believed to be several centuries old.",
+      "It is said that the original plans were lost.",
+      "The manuscript is thought to have belonged to a local historian.",
+      "The collection is reported to contain several unpublished letters."
+    ],
+    "question": "The painting is believed to have been ___ in the nineteenth century.",
+    "options": ["complete", "completed", "completing"],
+    "answer": "completed"
+  }
+]

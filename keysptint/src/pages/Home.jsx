@@ -6,7 +6,7 @@ import HomeHero from '../components/home/HomeHero'
 import PracticeModePicker from '../components/home/PracticeModePicker'
 import PracticeSummary from '../components/home/PracticeSummary'
 import { getHistory } from '../utils/storage'
-import GooglePlayComingSoon from '../components/GooglePlayComingSoon'
+import GooglePlayDownload from '../components/GooglePlayDownload'
 
 export default function Home() {
   const [settings, setSettings] = useState({
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <PracticeSummary history={history} />
       <div className="mt-7">
-        <GooglePlayComingSoon />
+        <GooglePlayDownload />
       </div>
     </>
   )

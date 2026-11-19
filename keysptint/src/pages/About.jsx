@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import Icon from '../components/Icon'
-import GooglePlayComingSoon from '../components/GooglePlayComingSoon'
+import GooglePlayDownload from '../components/GooglePlayDownload'
 import { challenges } from '../data/modes'
 import ContentLibraryStats from '../components/ContentLibraryStats'
 
@@ -116,7 +116,7 @@ export default function About({ notFound = false }) {
           ))}
         </div>
       </section>
-      <GooglePlayComingSoon />
+      <GooglePlayDownload />
       <section className="my-9 grid gap-7 md:grid-cols-3">
         <div>
           <h2 className="mb-3 text-sm font-bold">How your stats work</h2>
